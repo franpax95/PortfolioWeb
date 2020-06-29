@@ -1,0 +1,66 @@
+.Navbar,
+.Navbar a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Navbar{
+    z-index: 10;
+    background: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    transition: background-color 0.2s;
+}
+
+.Navbar a,
+.Navbar button{
+    justify-content: center;
+    height: 100%;
+    margin: 50px 10px 10px 50px;
+
+    text-align: center;
+
+    transition: color 0.4s;
+}
+.Navbar button{
+    outline: none;
+    border: none;
+    background: inherit;
+    cursor: pointer;
+    float: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+.Navbar a:hover{
+    text-decoration: underline;
+}
+.Navbar a.active{
+    font-weight: bold;
+}
+
+/* 600px and down */
+@media only screen and (max-width: 600px) {
+    .Navbar{ background-color: white; }
+    .Navbar a,
+    .Navbar button{ 
+        color: black;
+        font-size: 1.2em;
+    }
+}
+
+/* 600px and up */
+@media only screen and (min-width: 600px) {
+    .Navbar a,
+    .Navbar button{ font-size: 1.5em; }
+
+    .Navbar.black{ background-color: white; }
+    .Navbar.black a,
+    .Navbar.black button{ color: black; }
+
+    .Navbar.white{ background: none; }
+    .Navbar.white a,
+    .Navbar.white button{ color: white; }
+}

@@ -1,0 +1,91 @@
+.Develop{
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Develop .title{
+    width: 100%;
+    text-align: center;
+}
+
+.Develop .subtitle{
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.Develop img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Develop{
+        top: 150px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+
+        flex-direction: column;
+    }
+
+    .Develop .image{ width: 90%; }
+    .Develop .image:nth-child(odd){ display: none; }
+
+    .Develop .description{
+        width: 90%;
+        margin: 5vh 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .Develop{
+        top: 400px;
+        width: 580px;
+        margin: 100px auto;
+        
+        flex-direction: row;
+    }
+
+    .Develop .title{ font-size: 2.1em; }
+    .Develop .subtitle{ font-size: 1.7em; }
+    .Develop .description li{ font-size: 0.8em; }
+
+    .Develop .description{
+        width: 60%;
+        margin: 5vh 0;
+        padding: 10px;
+
+        font-size: 1.1em;
+    }
+
+    .Develop .image{
+        width: 40%;
+        padding: 10px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (min-width: 1000px) {
+    .Develop{
+        width: 980px;
+        margin-top: 200px;
+    }
+
+    .Develop .title{ font-size: 3.5em; }
+    .Develop .subtitle{ font-size: 2.5em; }
+
+    .Develop .description{
+        margin: 10vh 0;
+        font-size: 1.5em;
+    }
+}
