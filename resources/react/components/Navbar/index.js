@@ -1,62 +1,70 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Context } from '../../Context';
-import { MdLanguage } from "react-icons/md";
 
-import { Navbar as EspNavbarTexts } from '../../lang/esp';
-import { Navbar as EngNavbarTexts } from '../../lang/eng';
+import { useWindowHeight } from '../../hooks/useWindowHeight';
+import { useInnerWidth } from '../../hooks/useInnerWidth';
+import { useLanguage } from '../../hooks/useLanguage';
+
+import { MdLanguage } from "react-icons/md";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 import './Navbar.css';
 
 const Navbar = () => {
-    const [state, setState] = useContext(Context);
-    const [navbarTexts, setNavbarTexts] = useState(
-        (state.lang === 'esp') ? EspNavbarTexts : EngNavbarTexts
-    );
-    const [height, setHeight] = useState(window.scrollY);
-    const updateHeight = () => { setHeight(window.scrollY); }
-
-    /** "change navbar color when scrollY" effect */
-    useEffect(() => {
-        window.addEventListener("scroll", updateHeight);
-        return(() => window.removeEventListener("scroll", updateHeight));
-    });
-
-    /** "change lang" effect */
-    useEffect(() => {
-        setNavbarTexts(
-            (state.lang === 'esp') ? EspNavbarTexts : EngNavbarTexts
-        );
-    }, [state.lang]);
-
-    /** toggle lang when onClick event */
-    const onLangBtnClick = () => {
-        const lang = (state.lang === 'esp') ? 'eng' : 'esp';
-        setState(state => ({ ...state, lang }));
-    }
-
-
+    const height = useWindowHeight();
+    const width = useInnerWidth();
 
     const { pathname } = useLocation();
-    const isActive = () => {
-        if(pathname === "/home")    return true;
-        else if(pathname === "/")   return true;
-        else                        return false;
+
+    const [texts, setLang] = useLanguage();
+
+    const [dropdownActive, setDropdownActive] = useState(false);
+    
+
+    const isHomeLinkActive = () => {
+        if((pathname === "/") || (pathname === "/home"))
+            return true;
+        else
+            return false;
     }
+
+    const changeLang = (lang) => {
+        setLang(lang);
+        setDropdownActive(!dropdownActive);
+    }
+
+    let class_name = (width > 600) ? `Navbar ${(height > 380) ? 'black' : 'white'}` : '';
+
+    let navClassName = (width > 600)
+        ? `Navbar ${(height > 380) ? 'black' : 'white'}`
+        : ''
+    
     return (
-        <div className={`Navbar ${(height > 380) ? 'black' : 'white'}`}>
-            <NavLink to="/home" activeClassName="active" isActive={() => isActive()}>
-                {navbarTexts.home}
+        <div className={class_name}>
+            <NavLink to="/home" activeClassName="active" isActive={() => isHomeLinkActive()}>
+                {texts.Navbar.home}
             </NavLink>
+
             <NavLink to="/develop" activeClassName="active">
-                {navbarTexts.develop}
+                {texts.Navbar.develop}
             </NavLink>
+
             <NavLink to="/projects" activeClassName="active">
-                {navbarTexts.projects}
+                {texts.Navbar.projects}
             </NavLink>
-            <button onClick={() => onLangBtnClick()}>
-                <MdLanguage /> {state.lang}
-            </button>
+
+            <div className="language-box">
+                <button onClick={() => setDropdownActive(!dropdownActive)}>
+                    <MdLanguage /> {(dropdownActive) ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
+                </button>
+                <button onClick={() => changeLang('esp')} className={(dropdownActive) ? 'visible' : 'none'}>
+                    Español
+                </button>
+                <button onClick={() => changeLang('eng')} className={(dropdownActive) ? 'visible' : 'none'}>
+                    English
+                </button>
+            </div>
+            
         </div>
     );
 }

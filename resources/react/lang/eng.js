@@ -58,3 +58,9 @@ export const Develop = {
         </>
     ]
 };
+
+const engTexts = {
+    Navbar, Home, Develop
+}
+
+export default engTexts;

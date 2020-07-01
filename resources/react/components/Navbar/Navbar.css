@@ -2,38 +2,62 @@
 .Navbar a{
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .Navbar{
     z-index: 10;
-    background: none;
     width: 100%;
+    min-height: 10vh;
+    max-height: 10vh;
+    padding-top: 5vh;
+
     position: fixed;
     top: 0;
+
+    align-items: flex-start;
+
+    background: none;
 
     transition: background-color 0.2s;
 }
 
-.Navbar a,
-.Navbar button{
-    justify-content: center;
-    height: 100%;
-    margin: 50px 10px 10px 50px;
+.Navbar .language-box{
+    float: right;
+    margin: 0 0 0 auto;
 
-    text-align: center;
-
-    transition: color 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
+.Navbar .language-box .none{
+    display: none;
+    opacity: 0;
+}
+.Navbar .language-box .visible{
+    display: block;
+    opacity: 1;
+}
+
 .Navbar button{
     outline: none;
     border: none;
     background: inherit;
     cursor: pointer;
-    float: right;
-    margin-left: auto;
-    margin-right: 0;
+    transition: opacity .2s;
 }
+
+.Navbar a{
+    height: 100%;
+    margin-left: 50px;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    transition: color 0.4s;
+}
+
 .Navbar a:hover{
     text-decoration: underline;
 }
@@ -55,6 +79,7 @@
 @media only screen and (min-width: 600px) {
     .Navbar a,
     .Navbar button{ font-size: 1.5em; }
+    .Navbar button.visible{ font-size: 1.1em; }
 
     .Navbar.black{ background-color: white; }
     .Navbar.black a,

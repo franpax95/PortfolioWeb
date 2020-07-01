@@ -34,6 +34,7 @@ const App = () => {
 
 
     return (<>
+        {/* {(window.innerWidth > 650) ? <Navbar /> : <Navbar />} */}
         <Navbar />
         <Header />
         <div className="App">

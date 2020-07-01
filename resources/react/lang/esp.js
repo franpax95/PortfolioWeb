@@ -56,3 +56,9 @@ export const Develop = {
         </>
     ]
 };
+
+const espTexts = {
+    Navbar, Home, Develop
+}
+
+export default espTexts;

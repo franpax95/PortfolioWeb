@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => {
-    const IMAGE = "/img/header3.jpg";
+    const IMAGE = "/img/header/header3.jpg";
 
     return(
         <div className="Header">
