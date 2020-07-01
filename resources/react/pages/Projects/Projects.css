@@ -1,0 +1,49 @@
+.Projects{
+    min-height: 100vh;
+}
+
+.Projects h1{
+    width: 100%;
+    text-align: center;
+}
+
+.Projects .list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Projects .list > *{
+    margin: 30px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Projects{
+        padding: 20vh 10px;
+    }
+    .Projects h1{
+        font-size: 8vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .Projects{
+        padding: 10vh 6vw;
+    }
+    .Projects h1{
+        font-size: 5vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (min-width: 1000px) {
+    .Projects {
+        padding: 10vh 12vw;
+    }
+    .Projects h1{
+        font-size: 3vw;
+    }
+}

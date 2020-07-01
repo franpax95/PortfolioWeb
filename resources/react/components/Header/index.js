@@ -8,8 +8,8 @@ const FORMAT = '.jpg';
 const getIndex = (pathname) => {
     if((pathname === '/') || pathname === '/home')
         return 1;
-    else if(pathname === '/develop') 
-        return 3;
+    else if(pathname === '/about') 
+        return 4;
     else
         return 3;
 }

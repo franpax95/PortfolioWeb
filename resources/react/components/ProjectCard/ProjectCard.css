@@ -1,0 +1,71 @@
+.ProjectCard{
+    width: 350px;
+    height: 350px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border: solid 2px black;
+}
+
+.ProjectCard:nth-child(1){ background-color: #955A9E; }
+.ProjectCard:nth-child(1) .name{ color: white; }
+
+.ProjectCard:nth-child(2){ background-color: #EBDCB5; }
+.ProjectCard:nth-child(2) .name{ color: black; }
+
+.ProjectCard:nth-child(3){ background-color: #E09DEB; }
+.ProjectCard:nth-child(3) .name{ color: white; }
+
+.ProjectCard:nth-child(4){ background-color: #86EBCD; }
+.ProjectCard:nth-child(4) .name{ color: black; }
+
+.ProjectCard .name{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ProjectCard .container{
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    transition: top 1s;
+}
+
+.ProjectCard .container .links{
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ProjectCard .container .links > *{
+    margin: 0 5px;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    color: black;
+
+    font-size: 40px;
+
+    transition: color .3s;
+}
+.ProjectCard .container .links > *:hover{
+    color: blue;
+}
+
+.ProjectCard .container .description{
+    padding: 10px;
+    text-align: center;
+}

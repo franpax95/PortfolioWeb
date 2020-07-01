@@ -1,73 +1,169 @@
 import React from 'react';
 
+
+
 export const Navbar = {
     home: 'Home',
     about: 'About',
     projects: 'Projects'
 };
 
+
+
 export const Home = {
-    title: '¿Buscas un desarrollador web?',
-    subtitle: 'Soy un desarrollador web y programador de Fuengirola, Málaga. \n Creo aplicaciones web, normalmente con React',
+    title: 'Are you looking for a web developer?',
+    subtitle: 'I am a web developer and programmer from Fuengirola, Malaga. \n I create web applications, usually with React.',
     emailbtn: 'Send me an email',
     article: <>
-        ¡Bienvenido al portfolio de <i>Francisco Javier Navarro García</i>! <br />
-        Si necesitas de una página web, no dudes en contactar conmigo para cualquier pregunta o consulta.
-        Sin compromiso, soy un humilde programador. <br /><br />
-        Creo páginas <b>bonitas</b> y <b>funcionales</b> para pequeños negocios. Puedes echar un vistazo en la pestaña de <b>Proyectos</b>.<br />
-        ¿Tienes clara tu idea de negocio? ¡Juntos podremos plasmarla sobre la web!
+        Welcome to the portfolio of <i>Francisco Javier Navarro García</i>! <br />
+        If you need a website, do not hesitate to contact me with any questions or queries.
+        Without commitment, I am a humble programmer.
+        <br /><br />
+        I create <b> nice </b> and <b> functional </b> pages for small businesses. You can take a look at the <b> Projects </b> tab. <br />
+        Are you clear about your business idea? Together we can capture it on the web!
+        <br /><br />
+        <span style={{fontSize: '1.1em'}}><b>Email</b>: fcojnavarrowork@gmail.com </span>
+        <br />
+        <b>Phone Number</b>: +34 697 883 410
     </>
-}
+};
+
+
 
 export const About = {
-    title: <>¡Bienvenido al portfolio de<br /><i>Francisco Javier Navarro García</i>!</>,
-    subtitle: 'Desarrollador web junior',
-    descriptions: [
+    title: 'Hey! I am Francisco',
+    subtitle: <>FullStack developer,<br />responsive design lover</>,
+    lasttitle: 'Welcome to my personal portfolio. I hope that its design and content are to your liking and, above all, that you find what you have come to look for :)',
+    articles: [
         <>
-            Tengo 24 años y soy estudiante de Ingeniería Telemática en la UMA, aunque mi verdadera pasión es el <b>desarrollo web</b>.
-            <br /><br />
-            Soy un enamorado de estas tecnologías desde que las descubrí en la carrera. Estoy seguro de haber encontrado mi <b>vocación</b> y estoy totalmente decidido a trabajar en lo que me gusta.
+            Despite being a web developer, I have completed several years of Telematics Engineering at UMA. There I discovered this sector and immediately I
+            I fell in love and fell in love with him. My goal is to be a complete and capable <i> FullStack </i> programmer.
         </>,
         <>
-            En lo que respecta al desarrollo web y la programación, tengo los conocimientos más básicos adquiridos en la carrera, es decir, HTML, CSS, JavaScript y PHP.
-            También empecé en el <i>framework</i> <b>CodeIgniter</b>, para posteriormente aprender <b>Laravel</b> o librerías como <b>React.js</b> por mi cuenta.
+            For <b> Front-End </b>, my favorite technology / library is <b> React.js </b>. In addition, it is the one that I have developed the most and have gone the furthest in recent years.
+            I really like to program with React. <br /> For the most knowledgeable, I love programming <i> functional components </i>. Both project and code are well structured and clean.
+            <br /> <b> Redux </b>, <i> Context </i>, <i> Hooks </i>, <i> React-Router </i>, <i> React-Springs </i> ... are some of the tools that I use when programming.
         </>,
         <>
-            De hecho, mis tecnologías favoritas son las dos últimas, React y Laravel. <br /><br />
-            En cuanto a <b>React.js</b>, he programado con componentes de clase y componentes funcionales, decantándome normalmente por la segunda opción.
-            Por supuesto, he trabajado con <i>Hooks</i>.
-            He programado diferentes aplicaciones usando diferentes <i>packages</i>, por ejemplo, <i>React-Router, React-Spring, React-Helmet...</i>
-            También manejando props de manera "vertical" con <b>Redux</b> y <b>Context</b>.
-            <br /><br />
-            Mi experiencia con <b>Laravel</b> es más limitada. <i>Autenticación de usuarios</i>, manejo de <b>ELOQUENT</b>, conexión con <b>MySQL</b> y manejo de APIs con <b>passport</b> para el Token 
-            son algunas de las cosas que he hecho con él. Mi intención e ilusión es ser un buen desarrollador <i>Full-Stack</i> capaz de gestionar y crear grandes páginas web.
-        </>,
-        <>
-            De mi experiencia con el desarrollo web, podemos hablar de
-            <ul>
-                <li>alrededor de 4 años de experiencia en <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> y <b>PHP</b>.</li>
-                <li>alrededor de 3 años de experiencia en el uso de <b>CodeIgniter</b>.</li>
-                <li>alrededor de 1 año de experiencia en el uso de <b>React.js</b>.</li>
-                <li>alrededor de 1 año de experiencia en el uso de <b>Laravel</b>.</li>
-                <li>uso de <b>JQuery</b> y <b>AJAX</b>.</li>
-                <li>uso de <b>MySQL</b>.</li>
-                <li>uso de <b>Redux</b>.</li>
-            </ul>
-            <br />
-            Además, en la carrera he tocado muchos otros lenguajes de programación
-            <ul>
-                <li>alrededor de 5 años desde que aprendí <b>C</b> y <b>C++</b>.</li>
-                <li>alrededor de 3 años programando en <b>JAVA</b>.</li>
-                <li><b>Arduino</b> para programar <b>IoT</b>.</li>
-                <li><b>AndroidStudio</b> (Java).</li>
-                <li><b>Python</b>.</li>
-            </ul>
+            For the <b> Back-End </b>, I usually use <b> Laravel </b> as the <i> framework </i>, but I've also programmed with <b> CodeIgniter </b>. <br /> Management of <b> databases </b>, <b>user
+            authentication</b> or <b> using public and custom APIs </b> are some of the things I can do.
         </>
+    ],
+    techs: {
+        title: 'Summary of the most important technologies I use',
+        list: [
+            <> more than 4 years of experience in <b> HTML </b>, <b> CSS </b>, <b> JavaScript (<i> ECMA6 </i>) </b> and <b> PHP </b>. </>,
+            <> more than 2 years of experience with <b> React.js </b> </>,
+            <> more than 2 years of experience in using <b> CodeIgniter </b> </>,
+            <> about 1 year of experience using <b> Laravel </b> </>,
+            <> use of relational databases: <b> MySQL </b>, <b> SQLite </b>, <b> PostgreSQL </b> ... </>,
+            <> use of <b> Node.js </b> and <b> Webpack </b>. </>
+        ]
+    },
+    otherTechs: {
+        title: 'Other technologies I have used',
+        list: [
+            <> use of <b> JQuery </b> and <b> GraphQL </b> </>,
+            <> more than 4 years programming <b> JAVA </b> in the degree, especially focused on Telecommunications (<i> sockets, servlets ... </i>) </>,
+            <> more than 5 years programming <b> C </b> in the race. </>,
+            <> experience with <b> C ++ </b> </>,
+            <> experience programming <b> IoT </b>, specifically <i> Arduino with JavaScript </i>. </>,
+            <> experience with <b> AndroidStudio </b> in <i> JAVA </i>. </>
+        ]
+    }
+};
+
+
+
+export const Projects = {
+    title: 'My Projects',
+    projects:[
+        {
+            id: 0,
+            name: <>Training app<br />(in maintenance)</>,
+            description: <>
+                Page developed with React and Laravel. Use Redux for vertical prop management.
+                <br /><br />
+                You can create a user and start customizing your exercises completely free. Access from the mobile anywhere.
+            </>,
+            external_link: 'https://entrenamiento-app.herokuapp.com/',
+            github_link: 'https://github.com/franpax95/Entrenamiento',
+            images: [
+                '/img/entrenamiento/img0.jpg',
+                '/img/entrenamiento/img1.jpg',
+                '/img/entrenamiento/img2.jpg',
+                '/img/entrenamiento/img3.jpg',
+                '/img/entrenamiento/img4.jpg',
+                '/img/entrenamiento/img5.jpg',
+                '/img/entrenamiento/img6.jpg'
+            ]
+        },
+        {
+            id: 1,
+            name: 'Joe Williams portfolio',
+            description: <>
+                Page developed with React and Laravel. Use Redux.
+                <br /><br />
+                Personal portfolio of Joe Williams, graphic designer. <br />
+                Made in collaboration with <b> @ DMM161 </b>.
+            </>,
+            external_link: 'https://joewilliams.herokuapp.com/',
+            github_link: 'https://github.com/franpax95/JoeWilliamsWeb',
+            images: [
+                '/img/joewilliams/img0.jpg',
+                '/img/joewilliams/img1.jpg',
+                '/img/joewilliams/img2.jpg',
+                '/img/joewilliams/img3.jpg',
+                '/img/joewilliams/img4.jpg',
+                '/img/joewilliams/img5.jpg',
+                '/img/joewilliams/img6.jpg',
+                '/img/joewilliams/img7.jpg'
+            ]
+        },
+        {
+            id: 2,
+            name: 'Autoescuela Las Lagunas',
+            description: <>
+                Page developed with React, <i> react-springs </i> for transition between routes.
+                <br /><br />
+                Las Lagunas Driving School Page (<i> now Servial Driving School </i>). Available in Spanish and English.
+            </>,
+            external_link: 'https://aelaslagunas.franpax95.vercel.app/',
+            github_link: 'https://github.com/franpax95/aelaslagunas',
+            images: [
+                '/img/aelaslagunas/img0.jpg',
+                '/img/aelaslagunas/img1.jpg',
+                '/img/aelaslagunas/img2.jpg',
+                '/img/aelaslagunas/img3.jpg',
+                '/img/aelaslagunas/img4.jpg',
+                '/img/aelaslagunas/img5.jpg'
+            ]
+        },
+        {
+            id: 3,
+            name: 'Petgram',
+            description: <>
+                Application developed with React. Use <i> GraphQL </i> to request an api made with <i> Express </i>.
+                <br /><br />
+                Platzi <i> React Advanced </i> tutorial. Upload and share photos of pets.
+            </>,
+            external_link: 'https://curso-platzi-react-avanzado.franpax95.now.sh/',
+            github_link: 'https://github.com/franpax95/Curso-Platzi-React-Avanzado',
+            images: [
+                '/img/petgram/img0.jpg',
+                '/img/petgram/img1.jpg',
+                '/img/petgram/img2.jpg',
+                '/img/petgram/img3.jpg',
+                '/img/petgram/img4.jpg'
+            ]
+        }
     ]
 };
 
+
+
 const engTexts = {
-    Navbar, Home, About
+    Navbar, Home, About, Projects
 }
 
 export default engTexts;

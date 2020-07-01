@@ -7,6 +7,7 @@ import Header from '../components/Header';
 
 import Home from '../pages/Home';
 import About from '../pages/About';
+import Projects from '../pages/Projects';
 
 import './App.css';
 
@@ -44,6 +45,7 @@ const App = () => {
                     <Switch location={location}>
                         <Route exact path={["/", "/home"]} component={Home} />
                         <Route exact path="/about" component={About} />
+                        <Route exact path="/projects" component={Projects} />
                     </Switch>
                 </animated.div>
             ))}
