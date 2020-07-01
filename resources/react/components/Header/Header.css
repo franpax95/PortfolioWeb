@@ -6,6 +6,8 @@
     max-height: 400px;
     min-height: 400px;
     object-fit: cover;
+
+    transition: opacity .3s;
 }
 
 /* Extra small devices (phones, 600px and down) */

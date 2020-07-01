@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 
 import Home from '../pages/Home';
-import Develop from '../pages/Develop';
+import About from '../pages/About';
 
 import './App.css';
 
@@ -34,7 +34,6 @@ const App = () => {
 
 
     return (<>
-        {/* {(window.innerWidth > 650) ? <Navbar /> : <Navbar />} */}
         <Navbar />
         <Header />
         <div className="App">
@@ -44,7 +43,7 @@ const App = () => {
                 <animated.div key={key} style={props}>
                     <Switch location={location}>
                         <Route exact path={["/", "/home"]} component={Home} />
-                        <Route exact path="/develop" component={Develop} />
+                        <Route exact path="/about" component={About} />
                     </Switch>
                 </animated.div>
             ))}

@@ -2,17 +2,24 @@ import React from 'react';
 
 export const Navbar = {
     home: 'Home',
-    develop: 'Web Development',
+    about: 'About',
     projects: 'Projects'
 };
 
 export const Home = {
-    title: { prev: '¡Bienvenido al portfolio de', post: 'Francisco Javier Navarro García!' },
-    subtitle: 'Desarrollador web junior',
-    description: <>Desarrollo <b>web</b></>
+    title: '¿Buscas un desarrollador web?',
+    subtitle: 'Soy un desarrollador web y programador de Fuengirola, Málaga. \n Creo aplicaciones web, normalmente con React',
+    emailbtn: 'Send me an email',
+    article: <>
+        ¡Bienvenido al portfolio de <i>Francisco Javier Navarro García</i>! <br />
+        Si necesitas de una página web, no dudes en contactar conmigo para cualquier pregunta o consulta.
+        Sin compromiso, soy un humilde programador. <br /><br />
+        Creo páginas <b>bonitas</b> y <b>funcionales</b> para pequeños negocios. Puedes echar un vistazo en la pestaña de <b>Proyectos</b>.<br />
+        ¿Tienes clara tu idea de negocio? ¡Juntos podremos plasmarla sobre la web!
+    </>
 }
 
-export const Develop = {
+export const About = {
     title: <>¡Bienvenido al portfolio de<br /><i>Francisco Javier Navarro García</i>!</>,
     subtitle: 'Desarrollador web junior',
     descriptions: [
@@ -60,7 +67,7 @@ export const Develop = {
 };
 
 const engTexts = {
-    Navbar, Home, Develop
+    Navbar, Home, About
 }
 
 export default engTexts;

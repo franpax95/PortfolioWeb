@@ -1,26 +1,26 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { Context } from '../../Context';
+import React from 'react';
+import { useLanguage } from '../../hooks/useLanguage';
+import { nl2br } from '../../util';
 
 import './Home.css';
 
-import { nl2br } from '../../util';
-import { Home as EspHomeTexts } from '../../lang/esp';
-import { Home as EngHomeTexts } from '../../lang/eng';
-
 const Home = () => {
-    const [state, setState] = useContext(Context);
-    const [homeTexts, setHomeTexts] = useState(
-        (state.lang === 'esp') ? EspHomeTexts : EngHomeTexts
-    );
-    useEffect(() => {
-        setHomeTexts(
-            (state.lang === 'esp') ? EspHomeTexts : EngHomeTexts
-        );
-    }, [state.lang]);
+    const [texts, setLang] = useLanguage();
 
     return (
         <div className="Home">
-            Home!
+            <h1>{texts.Home.title}</h1>
+            <h3>{nl2br(texts.Home.subtitle)}</h3>
+            <button className="emailbtn" onClick={() => alert('Disabled at the moment')}>{texts.Home.emailbtn}</button>
+
+            <div className="section">
+                <div className="wrapper">
+                    <img src="/img/about2.jpg" alt="Francisco Javier Navarro García" />
+                </div>
+                <div className="article">
+                    {texts.Home.article}
+                </div>
+            </div>
         </div>
     );
 }

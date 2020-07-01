@@ -2,63 +2,72 @@ import React from 'react';
 
 export const Navbar = {
     home: 'Inicio',
-    develop: 'Desarrollo web',
+    about: 'Sobre mí',
     projects: 'Mis trabajos'
 };
 
 export const Home = {
-
+    title: '¿Buscas un desarrollador web?',
+    subtitle: 'Soy un desarrollador web y programador de Fuengirola, Málaga. \n Creo aplicaciones web, normalmente con React.',
+    emailbtn: 'Envíame un email',
+    article: <>
+        ¡Bienvenido al portfolio de <i>Francisco Javier Navarro García</i>! <br />
+        Si necesitas de una página web, no dudes en contactar conmigo para cualquier pregunta o consulta.
+        Sin compromiso, soy un humilde programador. 
+        <br /><br />
+        Creo páginas <b>bonitas</b> y <b>funcionales</b> para pequeños negocios. Puedes echar un vistazo en la pestaña de <b>Mis trabajos</b>.<br />
+        ¿Tienes clara tu idea de negocio? ¡Juntos podremos plasmarla sobre la web!
+        <br /><br />
+        <span style={{fontSize: '1.1em'}}><b>Email</b>: fcojnavarrowork@gmail.com </span>
+        <br />
+        <b>Teléfono</b>: 697 883 410
+    </>
 }
 
-export const Develop = {
-    title: <>¡Bienvenido al portfolio de<br /><i>Francisco Javier Navarro García</i>!</>,
-    subtitle: 'Desarrollador web junior',
-    descriptions: [
+export const About = {
+    title: '¡Hola! Soy Francisco',
+    subtitle: <>Desarrollador web FullStack,<br />apasionado de los diseños responsivos</>,
+    lasttitle: 'Bienvenido a mi portfolio personal. Espero que su diseño y contenido sean de tu agrado y, sobretodo, que encuentres lo que has venido a buscar :)',
+    articles: [
         <>
-            Tengo 24 años y soy estudiante de Ingeniería Telemática en la UMA, aunque mi verdadera pasión es el <b>desarrollo web</b>.
-            <br /><br />
-            Soy un enamorado de estas tecnologías desde que las descubrí en la carrera. Estoy seguro de haber encontrado mi <b>vocación</b> y estoy totalmente decidido a trabajar en lo que me gusta.
+            A pesar de ser un desarrollador web, he cursado varios años de la carrera de Ingeniería Telemática en la UMA. Allí descubrí este sector y enseguida me
+            enamoré y apasioné por él. Mi objetivo es ser un programador <i>FullStack</i> completo y capaz.
         </>,
         <>
-            En lo que respecta al desarrollo web y la programación, tengo los conocimientos más básicos adquiridos en la carrera, es decir, HTML, CSS, JavaScript y PHP.
-            También empecé en el <i>framework</i> <b>CodeIgniter</b>, para posteriormente aprender <b>Laravel</b> o librerías como <b>React.js</b> por mi cuenta.
+            En el caso del <b>Front-End</b>, mi tecnología/librería favorita es <b>React.js</b>. Además, es en la que más he desarrollado y más lejos he llegado en los últimos años.
+            Realmente me gusta programar con React. <br /> Para los más entendidos, me encanta programar <i>componentes funcionales</i>. Tanto proyecto, como código quedan bien estructurados y limpios.
+            <br /><b>Redux</b>, <i>Context</i>, <i>Hooks</i>, <i>React-Router</i>, <i>React-Springs</i>... son algunas de las herramientas que utilizo a la hora de programar.
         </>,
         <>
-            De hecho, mis tecnologías favoritas son las dos últimas, React y Laravel. <br /><br />
-            En cuanto a <b>React.js</b>, he programado con componentes de clase y componentes funcionales, decantándome normalmente por la segunda opción.
-            Por supuesto, he trabajado con <i>Hooks</i>.
-            He programado diferentes aplicaciones usando diferentes <i>packages</i>, por ejemplo, <i>React-Router, React-Spring, React-Helmet...</i>
-            También manejando props de manera "vertical" con <b>Redux</b> y <b>Context</b>.
-            <br /><br />
-            Mi experiencia con <b>Laravel</b> es más limitada. <i>Autenticación de usuarios</i>, manejo de <b>ELOQUENT</b>, conexión con <b>MySQL</b> y manejo de APIs con <b>passport</b> para el Token 
-            son algunas de las cosas que he hecho con él. Mi intención e ilusión es ser un buen desarrollador <i>Full-Stack</i> capaz de gestionar y crear grandes páginas web.
-        </>,
-        <>
-            De mi experiencia con el desarrollo web, podemos hablar de
-            <ul>
-                <li>alrededor de 4 años de experiencia en <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> y <b>PHP</b>.</li>
-                <li>alrededor de 3 años de experiencia en el uso de <b>CodeIgniter</b>.</li>
-                <li>alrededor de 1 año de experiencia en el uso de <b>React.js</b>.</li>
-                <li>alrededor de 1 año de experiencia en el uso de <b>Laravel</b>.</li>
-                <li>uso de <b>JQuery</b> y <b>AJAX</b>.</li>
-                <li>uso de <b>MySQL</b>.</li>
-                <li>uso de <b>Redux</b>.</li>
-            </ul>
-            <br />
-            Además, en la carrera he tocado muchos otros lenguajes de programación
-            <ul>
-                <li>alrededor de 5 años desde que aprendí <b>C</b> y <b>C++</b>.</li>
-                <li>alrededor de 3 años programando en <b>JAVA</b>.</li>
-                <li><b>Arduino</b> para programar <b>IoT</b>.</li>
-                <li><b>AndroidStudio</b> (Java).</li>
-                <li><b>Python</b>.</li>
-            </ul>
+            Para el <b>Back-End</b>, suelo utilizar <b>Laravel</b> como <i>framework</i>, pero también he programado con <b>CodeIgniter</b>. <br />Manejo de <b>bases de datos</b>, <b>gestión
+             de usuarios</b> o <b>uso de APIs públicas y personalizadas</b> son algunas de las cosas que puedo hacer.
         </>
-    ]
+    ],
+    techs: {
+        title: 'Resumen de las tecnologías más importantes que uso',
+        list: [
+            <>más de 4 años de experiencia en <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> y <b>PHP</b>.</>,
+            <>más de 2 años de experiencia con <b>React.js</b></>,
+            <>más de 2 años de experiencia en el uso de <b>CodeIgniter</b></>,
+            <>alrededor de 1 año de experiencia usando <b>Laravel</b></>,
+            <>uso de bases de datos relacionales: <b>MySQL</b>, <b>SQLite</b>, <b>PostgreSQL</b>...</>
+        ]
+    },
+    otherTechs: {
+        title: 'Otras tecnologías que he utilizado',
+        list: [
+            <>uso de <b>JQuery</b> y <b>GraphQL</b></>,
+            <>más de 4 años programando <b>JAVA</b> en la carrera, sobretodo enfocado en Telecomunicaciones (<i>sockets, servlets...</i>)</>,
+            <>más de 5 años programando <b>C</b> en la carrera.</>,
+            <>experiencia con <b>C++</b></>,
+            <>experiencia programando <b>IoT</b>, concretamente <i>Arduino con JavaScript</i>.</>,
+            <>experiencia con <b>AndroidStudio</b> en <i>JAVA</i>.</>
+        ]
+    }
 };
 
 const espTexts = {
-    Navbar, Home, Develop
+    Navbar, Home, About
 }
 
 export default espTexts;
