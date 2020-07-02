@@ -43,7 +43,10 @@ const Navbar = () => {
     return (<>
         {
             (width < WIDTH_LIMIT) &&
-            <button className="SidebarButton" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+            <button 
+                className={`SidebarButton${(isSidebarOpen) ? ' red' : ''}`} 
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            >
                 {(isSidebarOpen) ? <MdClose /> : <GoThreeBars />}
             </button>
         }
