@@ -78,12 +78,10 @@
 
 .EmailModal .form label{
     font-weight: bold;
-    font-size: 1.2em;
 }
 .EmailModal .form input{
     outline: none;
     padding: 1px;
-    font-size: 1.1em;
 }
 
 .EmailModal .form textarea{
@@ -94,8 +92,6 @@
 }
 
 .EmailModal .form button:not(.close-btn){
-    height: 70px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,7 +101,7 @@
     background-color: #262626;
     color: white;
 
-    font-size: 2em;
+    
     font-weight: bold;
 
     transition: color .5s, background-color .5s;
@@ -122,8 +118,33 @@
 @media only screen and (max-width: 600px) {
     .EmailModal .form{
         /* height: 70vh; */
+        max-height: 85vh;
         width: 90vw;
     }
+
+    .EmailModal .form .close-btn{
+        height: 30px;
+        width: 30px;
+        font-size: 1.2em;
+    }
+
+    .EmailModal .form h1{
+        font-size: 1.3em;
+    }
+
+    .EmailModal .form label{
+        font-size: 1em;
+    }
+
+    .EmailModal .form input{
+        font-size: 0.9em;
+    }
+
+    .EmailModal .form button:not(.close-btn){
+        height: 50px;
+        font-size: 1.2em;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -131,6 +152,25 @@
     .EmailModal .form{
         /* height: 50vh; */
         width: 70vw;
+    }
+
+    .EmailModal .form .close-btn{
+        height: 60px;
+        width: 60px;
+        font-size: 2em;
+    }
+
+    .EmailModal .form button:not(.close-btn){
+        height: 70px;
+        font-size: 2em;
+    }
+
+    .EmailModal .form label{
+        font-size: 1.2em;
+    }
+
+    .EmailModal .form input{
+        font-size: 1.1em;
     }
 }
 
