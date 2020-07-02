@@ -14,7 +14,7 @@ const EmailModal = ({ onClickOutside }) => {
         subject: '',
         body: ''
     });
-    const [notification, setNotification] = useState('error');
+    const [notification, setNotification] = useState('');
 
     const onChange = (e) => {
         setFormData({
