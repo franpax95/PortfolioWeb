@@ -14,6 +14,7 @@ const EmailModal = ({ onClickOutside }) => {
         subject: '',
         body: ''
     });
+    const [notification, setNotification] = useState('error');
 
     const onChange = (e) => {
         setFormData({
@@ -26,11 +27,20 @@ const EmailModal = ({ onClickOutside }) => {
         console.log(formData);
         try{
             axios.post('/api/contact', formData);
-            console.log('Email enviado');
+            setNotification('success');
+            //console.log('Email enviado');
         }catch(err){
-            console.log(err);
+            //console.log(err);
+            setNotification('error');
         }
     }
+
+    const renderNotification = () => (
+        <div className={`notification ${notification}`}>
+            {(notification === 'success') && texts.Email.success}
+            {(notification === 'error') && texts.Email.error}
+        </div>
+    );
 
     return (
         <div className="EmailModal" onClick={onClickOutside}>
@@ -38,6 +48,8 @@ const EmailModal = ({ onClickOutside }) => {
                 <button className="close-btn" onClick={onClickOutside}>
                     <MdClose />
                 </button>
+
+                {notification && renderNotification()}
 
                 <h1>{texts.Email.title}</h1>
 

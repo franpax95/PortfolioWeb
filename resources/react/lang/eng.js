@@ -167,7 +167,9 @@ export const Email = {
     email: 'Email',
     subject: 'Subject',
     body: 'Message',
-    submit: 'Send Email'
+    submit: 'Send Email',
+    success: 'The email was sent correctly.',
+    error: 'Something wrong! Please, try again later.'
 };
 
 

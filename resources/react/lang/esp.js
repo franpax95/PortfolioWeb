@@ -167,7 +167,9 @@ export const Email = {
     email: 'Correo Electrónico',
     subject: 'Asunto',
     body: 'Mensaje',
-    submit: 'Enviar Correo'
+    submit: 'Enviar Correo',
+    success: 'El Email se envió correctamente.',
+    error: 'Ocurrió algo inesperado, vuelve a intentarlo más tarde.'
 };
 
 

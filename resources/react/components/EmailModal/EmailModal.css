@@ -62,6 +62,22 @@
     width: 80%;
 }
 
+.EmailModal .notification{
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+.EmailModal .notification.success{
+    border: solid 1.5px green;
+    background-color: #e9fce9;
+    color: green;
+}
+.EmailModal .notification.error{
+    border: solid 1.5px red;
+    background-color: #ffe6e6;
+    color: red;
+}
+
 .EmailModal .form h1{
     text-align: center;
 }
@@ -101,7 +117,6 @@
     background-color: #262626;
     color: white;
 
-    
     font-weight: bold;
 
     transition: color .5s, background-color .5s;
@@ -126,6 +141,10 @@
         height: 30px;
         width: 30px;
         font-size: 1.2em;
+    }
+
+    .EmailModal .form .notification{
+        font-size: 0.9em;
     }
 
     .EmailModal .form h1{
