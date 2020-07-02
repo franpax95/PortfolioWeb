@@ -161,9 +161,19 @@ export const Projects = {
 };
 
 
+export const Email = {
+    title: 'Contacta conmigo',
+    name: 'Nombre y Apellidos',
+    email: 'Correo Electrónico',
+    subject: 'Asunto',
+    body: 'Mensaje',
+    submit: 'Enviar Correo'
+};
+
+
 
 const espTexts = {
-    Navbar, Home, About, Projects
+    Navbar, Home, About, Projects, Email
 }
 
 export default espTexts;

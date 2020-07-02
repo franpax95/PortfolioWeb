@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
+
 import { BsCardImage } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
+
 import './ProjectCard.css';
 
 const ProjectCard = ({ name, description, external_link, github_link, onPreviewClick }) => {

@@ -1,0 +1,143 @@
+.EmailModal{
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.EmailModal .form{
+    max-height: 70vh;
+    height: 700px;
+    width: 50vw;
+    padding: 20px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 1.5px gray;
+    background-color: white;
+}
+
+.EmailModal .form .close-btn{
+    height: 60px;
+    width: 60px;
+
+    z-index: 501;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #262626;
+    color: white;
+
+    font-size: 2em;
+
+    transition: color .5s, background-color .5s;
+}
+.EmailModal .form .close-btn:hover{
+    color: whitesmoke;
+    background-color: gray;
+}
+.EmailModal .form > *:not(.close-btn){
+    margin: 10px 0;
+    width: 80%;
+}
+
+.EmailModal .form h1{
+    text-align: center;
+}
+
+.EmailModal .form > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.EmailModal .form > div > *{
+    width: 100%;
+}
+
+.EmailModal .form label{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.EmailModal .form input{
+    outline: none;
+    padding: 1px;
+    font-size: 1.1em;
+}
+
+.EmailModal .form textarea{
+    outline: none;
+    padding: 1px;
+    resize: none;
+    height: 85px;
+}
+
+.EmailModal .form button:not(.close-btn){
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border: none;
+    background-color: #262626;
+    color: white;
+
+    font-size: 2em;
+    font-weight: bold;
+
+    transition: color .5s, background-color .5s;
+}
+
+.EmailModal .form button:not(.close-btn):hover{
+    background-color: gray;
+    color: whitesmoke;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .EmailModal .form{
+        /* height: 70vh; */
+        width: 90vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .EmailModal .form{
+        /* height: 50vh; */
+        width: 70vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (min-width: 1000px) {
+    .EmailModal .form{
+        /* height: 50vh; */
+        width: 50vw;
+    }
+}

@@ -161,9 +161,19 @@ export const Projects = {
 };
 
 
+export const Email = {
+    title: 'Contact',
+    name: 'Name and surname',
+    email: 'Email',
+    subject: 'Subject',
+    body: 'Message',
+    submit: 'Send Email'
+};
+
+
 
 const engTexts = {
-    Navbar, Home, About, Projects
+    Navbar, Home, About, Projects, Email
 }
 
 export default engTexts;

@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { nl2br } from '../../util';
+
+import EmailModal from '../../components/EmailModal';
 
 import './Home.css';
 
 const Home = () => {
     const [texts, setLang] = useLanguage();
+    const [isModalOn, setIsModalOn] = useState(false);
 
-    return (
+    return (<>
+        {isModalOn && <EmailModal  onClickOutside={() => setIsModalOn(false)} />}
         <div className="Home">
             <h1>{texts.Home.title}</h1>
             <h3>{nl2br(texts.Home.subtitle)}</h3>
-            <button className="emailbtn" onClick={() => alert('Disabled at the moment')}>{texts.Home.emailbtn}</button>
+            <button className="emailbtn" onClick={() => setIsModalOn(true)}>{texts.Home.emailbtn}</button>
 
             <div className="section">
                 <div className="wrapper">
@@ -22,7 +26,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    );
+    </>);
 }
 
 export default Home;
