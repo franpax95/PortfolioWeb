@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
-import { useTransition, animated } from 'react-spring';
+import { useSpring, useTransition, animated } from 'react-spring';
 
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
@@ -24,13 +24,19 @@ const ScrollToTop = () => {
     return null;
 } 
 
+const ScrollToTheTop = () => {
+    const props = useSpring({ scroll: 0, from: { scroll: 0 } })
+    return <animated.div scrollTop={props.scroll} style={{ position: 'fixed', top: '0' }} />
+}
+
 
 const App = () => {
     const location = useLocation();
     const transitions = useTransition(location, location => location.pathname, {
         from: { opacity: 0 },
         enter: { opacity: 1 },
-        leave: { opacity: 0 }
+        leave: { opacity: 0 },
+        config: { duration: 300 }
     });
 
 

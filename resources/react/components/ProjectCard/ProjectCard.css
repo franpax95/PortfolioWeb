@@ -1,17 +1,25 @@
-.ProjectCard{
-    width: 350px;
-    height: 350px;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+.ProjectCard{
     position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.FrontProjectCard {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    overflow: hidden;
-    border: solid 2px black;
+    cursor: default;
+    user-select: none;
+
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
 }
 
-.ProjectCard:nth-child(1){ background-color: #955A9E; }
+/* .ProjectCard:nth-child(1){ background-color: #955A9E; }
 .ProjectCard:nth-child(1) .name{ color: white; }
 
 .ProjectCard:nth-child(2){ background-color: #EBDCB5; }
@@ -21,36 +29,24 @@
 .ProjectCard:nth-child(3) .name{ color: white; }
 
 .ProjectCard:nth-child(4){ background-color: #86EBCD; }
-.ProjectCard:nth-child(4) .name{ color: black; }
+.ProjectCard:nth-child(4) .name{ color: black; } */
 
-.ProjectCard .name{
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-}
-
-.ProjectCard .container{
-    z-index: 100;
-    width: 100%;
-    height: 100%;
+.BackProjectCard .links{
     position: absolute;
+    top: 0;
+    left: 0;
 
-    background-color: rgba(255, 255, 255, 0.9);
-
-    transition: top 1s;
-}
-
-.ProjectCard .container .links{
-    height: 80px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
-.ProjectCard .container .links > *{
-    margin: 0 5px;
+.BackProjectCard .links > *{
+    margin: 0 15px;
 
     cursor: pointer;
     outline: none;
@@ -62,11 +58,19 @@
 
     transition: color .3s;
 }
-.ProjectCard .container .links > *:hover{
+.BackProjectCard .links > *:hover{
     color: blue;
 }
 
-.ProjectCard .container .description{
-    padding: 10px;
+.BackProjectCard .description{
+    position: absolute;
+    top: 100px;
+    left: 0;
+
+    width: 100%;
+    height: 300px;
+    padding-top: 20px;
+
+    user-select: none;
     text-align: center;
 }
