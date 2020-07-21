@@ -1,10 +1,14 @@
 import React from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useInnerWidth } from '../../hooks/useInnerWidth';
+import SlickCarouselSlider from '../../components/SlickCarouselSlider';
 
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import './About.css';
 
 const About = () => {
     const [texts, setLang] = useLanguage();
+    const width = useInnerWidth();
 
     return (
         <div className="About">
@@ -50,6 +54,23 @@ const About = () => {
                 <ul>{texts.About.otherTechs.list.map((li, key) => (
                     <li key={key}>{li}</li>
                 ))}</ul>
+            </div>
+
+            <h2>Diplomas de Platzi.com</h2>
+            <div className="section">
+                <SlickCarouselSlider
+                    images={[
+                        '/img/platzi/diploma-asincronismo-js.jpg',
+                        '/img/platzi/diploma-ecmascript-6.jpg',
+                        '/img/platzi/diploma-react.jpg',
+                        '/img/platzi/diploma-react-avanzado.jpg',
+                        '/img/platzi/diploma-react-router.jpg',
+                        '/img/platzi/diploma-redux.jpg',
+                        '/img/platzi/diploma-webpack.jpg'
+                    ]}
+                    width = {(width > 750) ? '650px' : '250px' }
+                    height = {(width > 750) ? '500px' : '200px' }
+                />
             </div>
         </div>
     );
