@@ -46,6 +46,11 @@ const About = (props) => {
                 border: 'none', 
                 borderTop: 'solid 1px lightgray' 
             }} />
+
+            <div className="secondary">
+                <Title color='#4d4d4d'>{txt.secondary.title}</Title>
+                <SubTitle color='#666666'>{txt.secondary.subtitle}</SubTitle>
+            </div>
         </div>
     );
 }
