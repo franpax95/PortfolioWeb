@@ -1,0 +1,43 @@
+.Title{
+    font-size: 42px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.SubTitle{
+    font-weight: 400;
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Title{
+        font-size: 26px;
+    }
+    .SubTitle{
+        font-size: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .Title{
+        font-size: 34px;
+        letter-spacing: 1px;
+    }
+    .SubTitle{
+        font-size: 26px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .Title{
+        font-size: 42px;
+    }
+    .SubTitle{
+        font-size: 32px;
+    }
+}

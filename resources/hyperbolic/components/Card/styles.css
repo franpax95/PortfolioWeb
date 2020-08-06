@@ -1,0 +1,71 @@
+.IconCard{
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.IconCard .icon{
+    color: #4d4d4d;
+    font-size: 36px;
+}
+
+.IconCard .title{
+    color: #4d4d4d;
+}
+
+.IconCard .description{
+    color: #666666;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .IconCard{
+        padding: 10px 0;
+    }
+    .IconCard .icon{
+        font-size: 24px;
+    }
+    
+    .IconCard .title{
+        font-size: 18px;
+    }
+    
+    .IconCard .description{
+        font-size: 14px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .IconCard{
+        padding: 25px 0;
+    }
+    .IconCard .icon{
+        font-size: 28px;
+    }
+    
+    .IconCard .title{
+        font-size: 22px;
+    }
+    
+    .IconCard .description{
+        font-size: 16px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .IconCard .icon{
+        font-size: 36px;
+    }
+    
+    .IconCard .title{
+        font-size: 26px;
+    }
+    
+    .IconCard .description{
+        font-size: 17px;
+    }
+}

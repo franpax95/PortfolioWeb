@@ -1,0 +1,44 @@
+.BackgroundFixedSection{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center center;
+}
+@media only screen and (max-width: 800px) {
+    .BackgroundFixedSection{
+        min-height: 50vh;
+        background-attachment: local;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .BackgroundFixedSection{
+        min-height: 80vh;
+        background-attachment: fixed;
+    }
+}
+
+
+
+
+.Section{
+    width: 100%;
+    padding: 8vh 5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 600px) {
+    .Section{ flex-direction: column; }
+}
+@media only screen and (min-width: 600px) {
+    .Section{ min-height: 70vh; }
+    .Section:not(.reverse){ flex-direction: row; }
+    .Section.reverse{ flex-direction: row-reverse; }
+}
