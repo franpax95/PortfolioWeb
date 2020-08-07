@@ -1,0 +1,29 @@
+.Projects{
+    width: 100%;
+    padding-top: 20vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Projects .Title,
+    .Projects .SubTitle { width: 90%; }
+    
+    /* .LargeImage{ display: none; } */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .Projects .Title,
+    .Projects .SubTitle { width: 80%; }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .Projects .Title,
+    .Projects .SubTitle { width: 70%; }
+}

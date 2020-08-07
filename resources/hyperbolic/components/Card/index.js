@@ -1,6 +1,8 @@
 import React from 'react';
 import './styles.css';
 
+import { LargeImage } from '../../components/Image';
+
 export const IconCard = ({
     width = '350px',
     title = 'Title',
@@ -11,3 +13,13 @@ export const IconCard = ({
     <div className="title">{title}</div>
     <div className="description">{description}</div>
 </div>;
+
+export const ProjectCard = ({
+    src = '',
+    title = 'Title',
+    description = 'Description',
+
+}) => <div className="ProjectCard">
+    <LargeImage height='300px' width='100%%' src='/img/projects/header.jpg' alt="" placeholder={false} />
+
+</div>

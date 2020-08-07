@@ -1,0 +1,114 @@
+.Contact{
+    width: 100%;
+    padding-top: 20vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Contact .form{
+    margin: 15vh 0 25vh 0;
+    padding: 5vh 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: solid 2px lightgray;
+    border-radius: 10px;
+}
+.Contact .form input,
+.Contact .form textarea{
+    outline: none;
+    padding: 10px;
+    border: solid 2px whitesmoke;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    resize: none;
+
+    font-size: 18px;
+
+    transition: border .3s;
+}
+.Contact .form input:focus,
+.Contact .form textarea:focus {
+    border: solid 2px gray;
+}
+
+.Contact .form .form-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Contact .form{  width: 95%; }
+
+    .Contact .Title,
+    .Contact .SubTitle { width: 90%; }
+
+    .Contact .form .form-group{ flex-direction: column; }
+    .Contact .form .form-group input{ 
+        width: 90%; 
+        margin: 10px 0;
+    }
+    .Contact .form textarea{
+        width: 90%;
+        height: 100px;
+        margin: 10px 0;
+    }
+    
+    .LargeImage{ display: none; }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .Contact .form{ width: 550px; }
+
+    .Contact .Title,
+    .Contact .SubTitle { width: 80%; }
+
+    .Contact .form .form-group{ 
+        flex-direction: row; 
+        padding: 0 25px;
+    }
+
+    .Contact .form .form-group input{ 
+        width: 200px;
+        margin: 25px;
+    }
+    
+    .Contact .form textarea{
+        width: 450px;
+        height: 125px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .Contact .form{
+        width: 750px;
+    }
+    .Contact .Title,
+    .Contact .SubTitle {
+        width: 70%;
+    }
+
+    .Contact .form .form-group input{ 
+        width: 300px;
+        margin: 25px;
+    }
+    
+    .Contact .form textarea{
+        width: 650px;
+        height: 150px;
+    }
+}

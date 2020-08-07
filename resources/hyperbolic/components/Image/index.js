@@ -8,9 +8,10 @@ export const LargeImage = ({
     src = '',
     alt = '',
     width = '100%',
-    height = '30vh'
+    height = '30vh',
+    placeholder = true
 }) => <div className="LargeImage" style={{ width, height }}>
-    <Img src={src} alt={alt} placeholder={spinner} />
+    <Img src={src} alt={alt} placeholder={placeholder && spinner} />
 </div>;     
 
 export const CircleImage = ({

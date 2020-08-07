@@ -32,7 +32,6 @@ const Navbar = () => {
 
 
     const { Navbar: txt } = texts;
-
     return (<>
         <button className="navbar-open-btn" onClick={() => setDisplay(true)}>
             <GoThreeBars />
@@ -54,6 +53,10 @@ const Navbar = () => {
 
                 <NavLink to="/projects" activeClassName="active" onClick={() => setDisplay(false)}>
                     {txt.projects}
+                </NavLink>
+
+                <NavLink to="/contact" activeClassName="active" onClick={() => setDisplay(false)}>
+                    {txt.contact}
                 </NavLink>
                 
                 <div className="lang">

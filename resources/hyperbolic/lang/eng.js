@@ -1,11 +1,14 @@
 import React from 'react';
-
+import { FaHtml5, FaCss3, FaPhp, FaReact, FaLaravel, FaNodeJs, FaJava } from 'react-icons/fa';
+import { IoLogoJavascript } from 'react-icons/io';
+import { DiCodeigniter, DiStreamline } from "react-icons/di";
 
 
 export const Navbar = {
     home: 'Home',
     about: 'About',
     projects: 'Projects',
+    contact: 'Contact',
     spanish: 'Spanish',
     english: 'English'
 };
@@ -51,7 +54,47 @@ export const About = {
     subtitle: 'React & Laravel web developer',
     primary: {
         title: 'Main technologies',
-        subtitle: 'that I use.'
+        subtitle: 'that I use.',
+        tech: [
+            { title: 'HTML5', description: 'Más de 4 años programando con HTML5.', icon: <FaHtml5 /> },
+            { title: 'CSS3', description: 'Más de 4 años programando con CSS.', icon: <FaCss3 /> },
+            { title: 'JavaScript', description: 'Más de 4 años programando con JavaScript. También ECMA6 ~ 10', icon: <IoLogoJavascript /> },
+            { title: 'PHP', description: 'Más de 4 años programando con PHP.', icon: <FaPhp /> },
+            { title: 'React', description: 'Más de 2 años programando con ReactJS (librería).', icon: <FaReact /> },
+            { title: 'Laravel', description: '1 año programando con Laravel (framework).', icon: <FaLaravel /> },
+            { title: 'CodeIgniter', description: 'Más de 2 años programando con CodeIgniter (framework).', icon: <DiCodeigniter /> },
+            { title: 'NodeJs', description: 'Uso de NodeJs.', icon: <FaNodeJs /> },
+            { title: 'MySQL', description: 'Más de 3 años de experiencia con bases de datos relacionales (PostreQL, MySQL...)', icon: <DiStreamline /> },
+            { title: 'Java', description: 'Más de 5 años programando con Java.', icon: <FaJava /> },
+            { title: 'Lenguaje C', description: 'Más de 5 años programando con C.', icon: 'C' },
+            { title: 'Lenguaje C++', description: 'Más de 1 año programando en C++.', icon: 'C++' }
+        ]
+    },
+    secondary: {
+        title: 'Diplomas de Platzi.com',
+        subtitle: ''
+    },
+    terciary: {
+        title: 'Otras tecnologías que he utilizado',
+        list: [
+            'experiencia usando Webpack, en concreto inicializando proyectos de React.',
+            'uso de JQuery y algo de GraphQL.',
+            'experiencia programando IoT, concretamente Arduino con JavaScript.',
+            'experiencia con AndroidStudio en JAVA.'
+        ]
+    },
+    quaternary: {
+        title: 'Acerca de mí',
+        subtitle: 'Desarrollador web Full-Stack',
+        description: <>
+            Sin duda, mi parte favorita es el <b>Front-End</b>. Puedo pasarme horas sólo para conseguir un pequeño detalle en un efecto o transición. Por ello, me siento muy cómodo con <b>React.js</b>. Es una librería que permite tener un control excelente de lo que utilizas o renderizas. <br /> Me considero muy detallista para lo que tenga que ver con la <b>UI/UX</b>.
+            <br /><br />
+            Algunas de las características o paquetes que he utilizado de React son <i>React Hooks</i>, <i>Redux</i>, <i>React Context</i>, <i>React/Reach Router</i>, <i>React Springs</i>, entre otras muchas.
+            <br /><br /><br /><br />
+            El <b>Back-End</b> fue donde empecé, en la carrera, con el framework <i>CodeIgniter</i>. Después de un par de años programando, me enteré de <b>Laravel</b> y desde entonces no he necesitado nada más.
+            <br /><br />
+            Manejo de <i>bases de datos</i>, <i>uso de APIs públicas y/o personalizadas</i> y <i>gestión de usuarios</i> son algunas de las cosas que puedo hacer.
+        </>
     }
 };
 

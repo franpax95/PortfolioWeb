@@ -8,7 +8,8 @@ import Navbar from '../components/Navbar';
 
 import Home from '../pages/Home';
 import About from '../pages/About';
-// import Projects from '../pages/Projects';
+import Projects from '../pages/Projects';
+import Contact from '../pages/Contact';
 
 
 const App = () => {
@@ -30,7 +31,8 @@ const App = () => {
                     <Switch location={location}>
                             <Route exact path="/" component={Home} />
                             <Route exact path="/about" component={About} />
-                            {/* <Route exact path="/projects" component={Projects} /> */}
+                            <Route exact path="/projects" component={Projects} />
+                            <Route exact path="/contact" component={Contact} />
                     </Switch>
                 </div>
             </animated.div>
