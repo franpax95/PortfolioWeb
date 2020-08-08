@@ -21,5 +21,13 @@ export const ProjectCard = ({
 
 }) => <div className="ProjectCard">
     <LargeImage height='300px' width='100%%' src='/img/projects/header.jpg' alt="" placeholder={false} />
+    <div className="icons">
 
+    </div>
+    <div className="title">
+
+    </div>
+    <div className="description">
+        
+    </div>
 </div>
