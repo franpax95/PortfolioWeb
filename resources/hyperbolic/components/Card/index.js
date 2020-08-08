@@ -18,16 +18,21 @@ export const ProjectCard = ({
     src = '',
     title = 'Title',
     description = 'Description',
+    onClick = undefined
+}) => {
 
-}) => <div className="ProjectCard">
-    <LargeImage height='300px' width='100%%' src='/img/projects/header.jpg' alt="" placeholder={false} />
-    <div className="icons">
 
-    </div>
-    <div className="title">
+    return (
+        <div className="ProjectCard">
+            <div className="img">
+                <button className="layout" onClick={onClick}>
+                    <div>View</div>
+                </button>
+                <img src={src} alt={title} />
+            </div>
 
-    </div>
-    <div className="description">
-        
-    </div>
-</div>
+            <div className="title">{title}</div>
+            <div className="description">{description}</div>
+        </div>
+    );
+}

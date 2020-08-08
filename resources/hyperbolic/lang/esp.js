@@ -115,7 +115,29 @@ export const Projects = {
         Aquí colgaré los proyectos que vaya realizando.
         <br />¡Podrás ver una vista previa desde aquí mismo o visitar directamente la página!
         <br /><i>Para programadores, también un enlace a GitHub.</i>
-    </>
+    </>,
+    projects: [
+        {
+            id: 0,
+            title: 'Entrenamiento App',
+            description: <>
+                Página desarrollada con React y Laravel. Usa Redux para la gestión vertical de las props.
+                <br /><br />
+                Puedes crearte un usuario y empezar a personalizar tus ejercicios completamente gratis. Accede desde el móvil en cualquier parte.
+            </>,
+            elink: 'https://entrenamiento-app.herokuapp.com/',
+            glink: 'https://github.com/franpax95/Entrenamiento',
+            images: [
+                '/img/entrenamiento/img0.jpg',
+                '/img/entrenamiento/img1.jpg',
+                '/img/entrenamiento/img2.jpg',
+                '/img/entrenamiento/img3.jpg',
+                '/img/entrenamiento/img4.jpg',
+                '/img/entrenamiento/img5.jpg',
+                '/img/entrenamiento/img6.jpg'
+            ]
+        }
+    ]
 };
 
 const espTexts = {
