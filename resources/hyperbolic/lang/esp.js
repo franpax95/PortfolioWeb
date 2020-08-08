@@ -122,21 +122,180 @@ export const Projects = {
             title: 'Entrenamiento App',
             description: <>
                 Página desarrollada con React y Laravel. Usa Redux para la gestión vertical de las props.
-                <br /><br />
+                <br />
                 Puedes crearte un usuario y empezar a personalizar tus ejercicios completamente gratis. Accede desde el móvil en cualquier parte.
             </>,
             elink: 'https://entrenamiento-app.herokuapp.com/',
             glink: 'https://github.com/franpax95/Entrenamiento',
-            images: [
-                '/img/entrenamiento/img0.jpg',
-                '/img/entrenamiento/img1.jpg',
-                '/img/entrenamiento/img2.jpg',
-                '/img/entrenamiento/img3.jpg',
-                '/img/entrenamiento/img4.jpg',
-                '/img/entrenamiento/img5.jpg',
-                '/img/entrenamiento/img6.jpg'
+            cover: '/img/projects/entrenamiento/img0.jpg',
+            srcs: [
+                '/img/projects/entrenamiento/img0.jpg',
+                '/img/projects/entrenamiento/img1.jpg',
+                '/img/projects/entrenamiento/img2.jpg',
+                '/img/projects/entrenamiento/img3.jpg',
+                '/img/projects/entrenamiento/img4.jpg',
+                '/img/projects/entrenamiento/img5.jpg',
+                '/img/projects/entrenamiento/img6.jpg'
             ]
-        }
+        },
+        {
+            id: 1,
+            title: 'Joe Williams portfolio',
+            description: <>
+                Página desarrollada con React y Laravel. Usa Redux.
+                <br />
+                Portfolio personal de Joe Williams, diseñador gráfico. <br />
+                Hecha en colaboración con <b>@DMM161</b>.
+            </>,
+            elink: 'https://joewilliams.herokuapp.com/',
+            glink: 'https://github.com/franpax95/JoeWilliamsWeb',
+            cover: '/img/projects/joewilliams/img0.jpg',
+            srcs: [
+                '/img/projects/joewilliams/img0.jpg',
+                '/img/projects/joewilliams/img1.jpg',
+                '/img/projects/joewilliams/img2.jpg',
+                '/img/projects/joewilliams/img3.jpg',
+                '/img/projects/joewilliams/img4.jpg',
+                '/img/projects/joewilliams/img5.jpg',
+                '/img/projects/joewilliams/img6.jpg',
+                '/img/projects/joewilliams/img7.jpg',
+                '/img/projects/joewilliams/img8.jpg'
+            ]
+        },
+        {
+            id: 2,
+            title: 'Autoescuela Las Lagunas',
+            description: <>
+                Página desarrollada con React, <i>react-springs</i> para transición entre rutas.
+                <br />
+                Página de Autoescuela Las Lagunas (<i>ahora Autoescuela Servial</i>). Disponible en Español e Inglés.
+            </>,
+            elink: 'https://aelaslagunas.franpax95.vercel.app/',
+            glink: 'https://github.com/franpax95/aelaslagunas',
+            cover: '/img/projects/aelaslagunas/img0.jpg',
+            srcs: [
+                '/img/projects/aelaslagunas/img0.jpg',
+                '/img/projects/aelaslagunas/img1.jpg',
+                '/img/projects/aelaslagunas/img2.jpg',
+                '/img/projects/aelaslagunas/img3.jpg',
+                '/img/projects/aelaslagunas/img4.jpg',
+                '/img/projects/aelaslagunas/img5.jpg'
+            ]
+        },
+        {
+            id: 3,
+            title: 'Petgram',
+            description: <>
+                Aplicación desarrollada con React. Utiliza <i>GraphQL</i> para peticiones a una api hecha con <i>Express</i>.
+                <br />
+                Tutorial Platzi <i>React Avanzado</i>. Sube y comparte fotos de mascotas.
+            </>,
+            elink: 'https://curso-platzi-react-avanzado.franpax95.now.sh/',
+            glink: 'https://github.com/franpax95/Curso-Platzi-React-Avanzado',
+            cover: '/img/projects/petgram/img0.jpg',
+            srcs: [
+                '/img/projects/petgram/img0.jpg',
+                '/img/projects/petgram/img1.jpg',
+                '/img/projects/petgram/img2.jpg',
+                '/img/projects/petgram/img3.jpg',
+                '/img/projects/petgram/img4.jpg'
+            ]
+        },
+        {
+            id: 4,
+            title: 'Restaurante Veggie',
+            description: <>
+                Diseño realizado con React, también en versión móvil.
+                <br />
+                Temática veggie. Usa react-spring para las transiciones.
+            </>,
+            elink: 'https://restaurante-comida-vegana.vercel.app',
+            glink: 'https://github.com/franpax95/restaurante-comida-vegana',
+            cover: '/img/projects/restauranteveggie/img0.jpg',
+            srcs: [
+                '/img/projects/restauranteveggie/img0.jpg',
+                '/img/projects/restauranteveggie/img1.jpg',
+                '/img/projects/restauranteveggie/img2.jpg',
+                '/img/projects/restauranteveggie/img3.jpg',
+                '/img/projects/restauranteveggie/img4.jpg',
+                '/img/projects/restauranteveggie/img5.jpg',
+                '/img/projects/restauranteveggie/img6.jpg',
+                '/img/projects/restauranteveggie/img7.jpg'
+            ]
+        },
+        {
+            id: 5,
+            title: 'Love App',
+            description: <>
+                Aplicación desarrollada con React. Muestra la compatibilidad con otra persona mediante los nombres.
+                <br />
+                Utiliza una API pública de RapidAPI.
+            </>,
+            elink: 'https://love-match-app.vercel.app/',
+            glink: 'https://github.com/franpax95/love-match-app',
+            cover: '/img/projects/loveapp/img0.jpg',
+            srcs: [
+                '/img/projects/loveapp/img0.jpg',
+                '/img/projects/loveapp/img1.jpg',
+                '/img/projects/loveapp/img2.jpg'
+            ]
+        },
+        {
+            id: 6,
+            title: 'Budismo Info App',
+            description: <>
+                Diseño realizado con React. 
+                <br />
+                Información relacionada con el budismo.
+            </>,
+            elink: 'https://budismo-app.vercel.app/',
+            glink: 'https://github.com/franpax95/budismo-app',
+            cover: '/img/projects/budismo/img0.jpg',
+            srcs: [
+                '/img/projects/budismo/img0.jpg',
+                '/img/projects/budismo/img1.jpg',
+                '/img/projects/budismo/img2.jpg'
+            ]
+        },
+        {
+            id: 7,
+            title: 'Gallery Portfolio',
+            description: <>
+                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
+                <br />
+                Para portfolios de fotógrafos, diseñadores gráficos...
+            </>,
+            elink: 'https://gallery-rho.vercel.app/',
+            glink: 'https://github.com/franpax95/gallery',
+            cover: '/img/projects/gallery/img0.jpg',
+            srcs: [
+                '/img/projects/gallery/img0.jpg',
+                '/img/projects/gallery/img1.jpg',
+                '/img/projects/gallery/img2.jpg',
+                '/img/projects/gallery/img3.jpg',
+                '/img/projects/gallery/img4.jpg'
+            ]
+        },
+        {
+            id: 8,
+            title: 'Mountain Design Portfolio',
+            description: <>
+                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
+                <br />
+                Diseño de un portfolio y/o negocios.
+            </>,
+            elink: 'https://mountain-design.vercel.app/',
+            glink: 'https://github.com/franpax95/Mountain-Design',
+            cover: '/img/projects/mountainportfolio/img0.jpg',
+            srcs: [
+                '/img/projects/mountainportfolio/img0.jpg',
+                '/img/projects/mountainportfolio/img1.jpg',
+                '/img/projects/mountainportfolio/img2.jpg',
+                '/img/projects/mountainportfolio/img3.jpg',
+                '/img/projects/mountainportfolio/img4.jpg',
+                '/img/projects/mountainportfolio/img5.jpg'
+            ]
+        },
     ]
 };
 

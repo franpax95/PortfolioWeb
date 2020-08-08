@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles.css';
 
-import { LargeImage } from '../../components/Image';
+import { FaGithub } from 'react-icons/fa';
+import { GoLinkExternal } from 'react-icons/go';
 
 export const IconCard = ({
     width = '350px',
@@ -15,9 +16,12 @@ export const IconCard = ({
 </div>;
 
 export const ProjectCard = ({
-    src = '',
+    id = 0,
+    cover = '',
     title = 'Title',
     description = 'Description',
+    elink = '',
+    glink = '',
     onClick = undefined
 }) => {
 
@@ -25,10 +29,16 @@ export const ProjectCard = ({
     return (
         <div className="ProjectCard">
             <div className="img">
-                <button className="layout" onClick={onClick}>
-                    <div>View</div>
+                <button className="layout">
+                    <div className="view" onClick={() => onClick(id)}>
+                        <span>View</span>
+                    </div>
+                    <div className="icons">
+                        <a href={glink} target="_blank" ><FaGithub />GitHub</a>
+                        <a href={elink} target="_blank"><GoLinkExternal />Visit webpage</a>
+                    </div>
                 </button>
-                <img src={src} alt={title} />
+                <img src={cover} alt={title} />
             </div>
 
             <div className="title">{title}</div>

@@ -31,10 +31,13 @@ const SlickCarouselSlider = ({
     const settings = {
         dots: true,
         infinite: true,
+        // fade: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true
+        centerMode: true,
+
+        focusOnSelect: true
     };
     const _width = `${parseInt(width)*1.2}px`;
 
