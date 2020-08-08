@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import Title, { SubTitle } from '../../components/Title';
 import Paragraph from '../../components/Paragraph';
 import { LargeImage } from '../../components/Image';
-
+import { ProjectCard } from '../../components/Card';
 
 const Projects = (props) => {
     /** lang hook */
@@ -29,7 +29,14 @@ const Projects = (props) => {
             <LargeImage height='40vh' width='80%' src='/img/projects/header.jpg' alt="" placeholder={false} />
 
 
-
+            <div className="list">
+                <ProjectCard 
+                    title='Entrenamiento'
+                    description='Página para entrenar'
+                    src='/img/projects/header.jpg'
+                    onClick = {() => { console.log('clicked') }}
+                />
+            </div>
         </div>
     );
 }
