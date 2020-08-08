@@ -147,7 +147,7 @@ export const Projects = {
                 Portfolio personal de Joe Williams, diseñador gráfico. <br />
                 Hecha en colaboración con <b>@DMM161</b>.
             </>,
-            elink: 'https://joewilliams.herokuapp.com/',
+            elink: 'https://velvetdistorsion.com',
             glink: 'https://github.com/franpax95/JoeWilliamsWeb',
             cover: '/img/projects/joewilliams/img0.jpg',
             srcs: [
