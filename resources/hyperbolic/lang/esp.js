@@ -119,27 +119,6 @@ export const Projects = {
     projects: [
         {
             id: 0,
-            title: 'Entrenamiento App',
-            description: <>
-                Página desarrollada con React y Laravel. Usa Redux para la gestión vertical de las props.
-                <br />
-                Puedes crearte un usuario y empezar a personalizar tus ejercicios completamente gratis. Accede desde el móvil en cualquier parte.
-            </>,
-            elink: 'https://entrenamiento-app.herokuapp.com/',
-            glink: 'https://github.com/franpax95/Entrenamiento',
-            cover: '/img/projects/entrenamiento/img0.jpg',
-            srcs: [
-                '/img/projects/entrenamiento/img0.jpg',
-                '/img/projects/entrenamiento/img1.jpg',
-                '/img/projects/entrenamiento/img2.jpg',
-                '/img/projects/entrenamiento/img3.jpg',
-                '/img/projects/entrenamiento/img4.jpg',
-                '/img/projects/entrenamiento/img5.jpg',
-                '/img/projects/entrenamiento/img6.jpg'
-            ]
-        },
-        {
-            id: 1,
             title: 'Joe Williams portfolio',
             description: <>
                 Página desarrollada con React y Laravel. Usa Redux.
@@ -147,7 +126,7 @@ export const Projects = {
                 Portfolio personal de Joe Williams, diseñador gráfico. <br />
                 Hecha en colaboración con <b>@DMM161</b>.
             </>,
-            elink: 'https://velvetdistorsion.com',
+            elink: 'https://velvetdistortion.com',
             glink: 'https://github.com/franpax95/JoeWilliamsWeb',
             cover: '/img/projects/joewilliams/img0.jpg',
             srcs: [
@@ -160,6 +139,26 @@ export const Projects = {
                 '/img/projects/joewilliams/img6.jpg',
                 '/img/projects/joewilliams/img7.jpg',
                 '/img/projects/joewilliams/img8.jpg'
+            ]
+        },
+        {
+            id: 1,
+            title: 'Mountain Design Portfolio',
+            description: <>
+                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
+                <br />
+                Diseño de un portfolio y/o negocios.
+            </>,
+            elink: 'https://mountain-design.vercel.app/',
+            glink: 'https://github.com/franpax95/Mountain-Design',
+            cover: '/img/projects/mountainportfolio/img0.jpg',
+            srcs: [
+                '/img/projects/mountainportfolio/img0.jpg',
+                '/img/projects/mountainportfolio/img1.jpg',
+                '/img/projects/mountainportfolio/img2.jpg',
+                '/img/projects/mountainportfolio/img3.jpg',
+                '/img/projects/mountainportfolio/img4.jpg',
+                '/img/projects/mountainportfolio/img5.jpg'
             ]
         },
         {
@@ -225,19 +224,21 @@ export const Projects = {
         },
         {
             id: 5,
-            title: 'Love App',
+            title: 'Gallery Portfolio',
             description: <>
-                Aplicación desarrollada con React. Muestra la compatibilidad con otra persona mediante los nombres.
+                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
                 <br />
-                Utiliza una API pública de RapidAPI.
+                Para portfolios de fotógrafos, diseñadores gráficos...
             </>,
-            elink: 'https://love-match-app.vercel.app/',
-            glink: 'https://github.com/franpax95/love-match-app',
-            cover: '/img/projects/loveapp/img0.jpg',
+            elink: 'https://gallery-rho.vercel.app/',
+            glink: 'https://github.com/franpax95/gallery',
+            cover: '/img/projects/gallery/img0.jpg',
             srcs: [
-                '/img/projects/loveapp/img0.jpg',
-                '/img/projects/loveapp/img1.jpg',
-                '/img/projects/loveapp/img2.jpg'
+                '/img/projects/gallery/img0.jpg',
+                '/img/projects/gallery/img1.jpg',
+                '/img/projects/gallery/img2.jpg',
+                '/img/projects/gallery/img3.jpg',
+                '/img/projects/gallery/img4.jpg'
             ]
         },
         {
@@ -259,43 +260,43 @@ export const Projects = {
         },
         {
             id: 7,
-            title: 'Gallery Portfolio',
+            title: 'Love App',
             description: <>
-                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
+                Aplicación desarrollada con React. Muestra la compatibilidad con otra persona mediante los nombres.
                 <br />
-                Para portfolios de fotógrafos, diseñadores gráficos...
+                Utiliza una API pública de RapidAPI.
             </>,
-            elink: 'https://gallery-rho.vercel.app/',
-            glink: 'https://github.com/franpax95/gallery',
-            cover: '/img/projects/gallery/img0.jpg',
+            elink: 'https://love-match-app.vercel.app/',
+            glink: 'https://github.com/franpax95/love-match-app',
+            cover: '/img/projects/loveapp/img0.jpg',
             srcs: [
-                '/img/projects/gallery/img0.jpg',
-                '/img/projects/gallery/img1.jpg',
-                '/img/projects/gallery/img2.jpg',
-                '/img/projects/gallery/img3.jpg',
-                '/img/projects/gallery/img4.jpg'
+                '/img/projects/loveapp/img0.jpg',
+                '/img/projects/loveapp/img1.jpg',
+                '/img/projects/loveapp/img2.jpg'
             ]
         },
         {
             id: 8,
-            title: 'Mountain Design Portfolio',
+            title: 'Entrenamiento App',
             description: <>
-                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
+                Página desarrollada con React y Laravel. Usa Redux para la gestión vertical de las props.
                 <br />
-                Diseño de un portfolio y/o negocios.
+                Puedes crearte un usuario y empezar a personalizar tus ejercicios completamente gratis. Accede desde el móvil en cualquier parte.
             </>,
-            elink: 'https://mountain-design.vercel.app/',
-            glink: 'https://github.com/franpax95/Mountain-Design',
-            cover: '/img/projects/mountainportfolio/img0.jpg',
+            elink: 'https://entrenamiento-app.herokuapp.com/',
+            glink: 'https://github.com/franpax95/Entrenamiento',
+            cover: '/img/projects/entrenamiento/img0.jpg',
             srcs: [
-                '/img/projects/mountainportfolio/img0.jpg',
-                '/img/projects/mountainportfolio/img1.jpg',
-                '/img/projects/mountainportfolio/img2.jpg',
-                '/img/projects/mountainportfolio/img3.jpg',
-                '/img/projects/mountainportfolio/img4.jpg',
-                '/img/projects/mountainportfolio/img5.jpg'
+                '/img/projects/entrenamiento/img0.jpg',
+                '/img/projects/entrenamiento/img1.jpg',
+                '/img/projects/entrenamiento/img2.jpg',
+                '/img/projects/entrenamiento/img3.jpg',
+                '/img/projects/entrenamiento/img4.jpg',
+                '/img/projects/entrenamiento/img5.jpg',
+                '/img/projects/entrenamiento/img6.jpg'
             ]
         },
+        
     ]
 };
 

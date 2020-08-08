@@ -49,7 +49,7 @@ const Contact = (props) => {
                 <Button>Enviar</Button>
             </form>
 
-            <Footer src='/img/hyperbolic/home_section_3_dark.jpg' />
+            <Footer src='/img/contact/footer.jpg' />
         </div>
     );
 }

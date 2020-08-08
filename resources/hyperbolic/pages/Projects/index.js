@@ -43,7 +43,7 @@ const Projects = (props) => {
             </div>
             {modal && <ProjectModal id={txt.projects[currentProject].id} srcs={txt.projects[currentProject].srcs} onClose={() => setModal(false)} />}
         
-            <Footer src='/img/hyperbolic/home_section_2_dark.jpg' />
+            <Footer src='/img/projects/footer.jpg' />
         </div>
     );
 }

@@ -94,7 +94,7 @@ const About = (props) => {
                 <Paragraph color='#666666'>{txt.quaternary.description}</Paragraph>
             </div>
 
-            <Footer src='/img/hyperbolic/home_section_1_dark.jpg' />
+            <Footer src='/img/about/footer.jpg' />
         </div>
     );
 }

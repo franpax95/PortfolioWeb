@@ -2,12 +2,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
 
+import { useSpring, animated } from 'react-spring';
+
 import Slider from 'react-slick';
 import './styles.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+
 
 const Slice = ({ url = '' }) => <div className="Slice" style={{ backgroundImage: `url(${url})` }}></div>;
 
@@ -23,6 +26,23 @@ export const ProjectModal = ({
     const [index, setIndex] = useState(0);
     useEffect(() => { setIndex(0); }, [id]);
 
+    const onMouseEnter = () => {
+        leftRef.current.style.opacity = 1;
+        rightRef.current.style.opacity = 1;
+    }
+    const onMouseLeave = () => {
+        leftRef.current.style.opacity = 0;
+        rightRef.current.style.opacity = 0;
+    }
+
+    /** useSpring settings */
+    const spring = useSpring({
+        from: { opacity: 0 },
+        to: { opacity: 1 },
+        config: { duration: 200 }
+    });
+
+    /** Slider settings */
     const settings = {
         infinite: true,
         dots: true,
@@ -36,17 +56,8 @@ export const ProjectModal = ({
         beforeChange: (current, next) => setIndex(next)
     };
 
-    const onMouseEnter = () => {
-        leftRef.current.style.opacity = 1;
-        rightRef.current.style.opacity = 1;
-    }
-    const onMouseLeave = () => {
-        leftRef.current.style.opacity = 0;
-        rightRef.current.style.opacity = 0;
-    }
-
     return ReactDOM.createPortal(
-        <div className="Modal" onClick={onClose}>
+        <animated.div className="Modal" onClick={onClose} style={spring}>
             <div className="layout" onClick={e => { e.stopPropagation(); ref.current.slickGoTo(index + 1); }} onMouseEnter={() => onMouseEnter()} onMouseLeave={() => onMouseLeave()}>
                 <button ref={leftRef} className="left" onClick={() => ref.current.slickGoTo(index - 1)}>
                     <MdKeyboardArrowLeft />
@@ -58,7 +69,7 @@ export const ProjectModal = ({
                     {srcs.map((src, key) => <Slice key={key} url={src} />)}
                 </Slider>
             </div>
-        </div>,
+        </animated.div>,
         document.body
     );
 }

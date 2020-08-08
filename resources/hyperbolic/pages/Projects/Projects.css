@@ -11,9 +11,9 @@
     padding: 15vh 10vw;
 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end; /** cause of row-reverse */
+    
     align-items: center;
 }
 .Projects .list > *{
@@ -22,17 +22,19 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .Projects{ padding: 20vh 10px 10px 10px; }
     .Projects .Title,
     .Projects .SubTitle { width: 90%; }
     
     .LargeImage{ display: none; }
+
+    .Projects .list{ justify-content: flex-start; }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .Projects .Title,
     .Projects .SubTitle { width: 80%; }
+    .Projects .list{ justify-content: center; }
 }
 
 
@@ -40,4 +42,5 @@
 @media only screen and (min-width: 992px) {
     .Projects .Title,
     .Projects .SubTitle { width: 70%; }
+    .Projects .list{ justify-content: flex-start; }
 }
