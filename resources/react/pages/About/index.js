@@ -1,78 +1,82 @@
 import React from 'react';
-import { useLanguage } from '../../hooks/useLanguage';
-import { useInnerWidth } from '../../hooks/useInnerWidth';
-import SlickCarouselSlider from '../../components/SlickCarouselSlider';
-
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import './About.css';
 
+import { useLanguage } from '../../hooks/useLanguage';
+
+import Layout from '../../components/Layout';
+import Title, { SubTitle } from '../../components/Title';
+import Paragraph from '../../components/Paragraph';
+import { IconCard } from '../../components/Card';
+import SlickCarouselSlider from '../../components/SlickCarouselSlider';
+
+
+const HorizontalRule = () => <hr style={{ width: '90%', margin: '10vh 0', border: 'none', borderTop: 'solid 1px lightgray' }}/>;
+
+
 const About = () => {
+    /** lang hook */
     const [texts, setLang] = useLanguage();
-    const width = useInnerWidth();
+    const { About: txt } = texts;
+
+    const images = [
+        '/img/platzi/diploma-asincronismo-js.jpg',
+        '/img/platzi/diploma-ecmascript-6.jpg',
+        '/img/platzi/diploma-react.jpg',
+        '/img/platzi/diploma-react-avanzado.jpg',
+        '/img/platzi/diploma-react-router.jpg',
+        '/img/platzi/diploma-redux.jpg',
+        '/img/platzi/diploma-webpack.jpg'
+    ];
 
     return (
-        <div className="About">
-            <h1>{texts.About.title}</h1>
-            <h3>{texts.About.subtitle}</h3>
-            <h5>{texts.About.lasttitle}</h5>
-
+        <Layout 
+            className = "About"
+            title = {txt.title}
+            subtitle = {txt.subtitle}
+            headerSrc = '/img/about/header.jpg'
+            footerSrc = '/img/about/footer.jpg'
+        >
             <div className="section">
-                <div className="wrapper">
-                    <img src="/img/about1.jpg" alt="Francisco Javier Navarro García" />
-                </div>
-                <div className="article">
-                    {texts.About.articles[0]}
+                <Title color='#4d4d4d'>{txt.section[0].title}</Title>
+                <SubTitle color='#666666'>{txt.section[0].subtitle}</SubTitle>
+
+                <div className="content icon-list">
+                    {txt.section[0].content.map((t, key) => <IconCard key={key} {...t} />)}
                 </div>
             </div>
 
+            <HorizontalRule />
+
             <div className="section">
-                <div className="article">
-                    {texts.About.articles[1]}
-                </div>
-                <div className="wrapper">
-                    <img src="/img/about3.jpg" alt="Francisco Javier Navarro García" />
-                </div>
+                <Title color='#4d4d4d'>{txt.section[1].title}</Title>
+                <SubTitle color='#666666'>{txt.section[1].subtitle}</SubTitle>
                 
-            </div>
-
-            <div className="section">
-                <div className="wrapper">
-                    <img src="/img/about2.jpg" alt="Francisco Javier Navarro García" />
-                </div>
-                <div className="article">
-                    {texts.About.articles[2]}
+                <div className="content">
+                    <SlickCarouselSlider images={images} />
                 </div>
             </div>
 
-            <div className="table">
-                <h4>{texts.About.techs.title}</h4>
-                <ul>{texts.About.techs.list.map((li, key) => (
-                    <li key={key}>{li}</li>
-                ))}</ul>
+            <HorizontalRule />
 
-                <h4>{texts.About.otherTechs.title}</h4>
-                <ul>{texts.About.otherTechs.list.map((li, key) => (
-                    <li key={key}>{li}</li>
-                ))}</ul>
-            </div>
-
-            <h2>Diplomas de Platzi.com</h2>
             <div className="section">
-                <SlickCarouselSlider
-                    images={[
-                        '/img/platzi/diploma-asincronismo-js.jpg',
-                        '/img/platzi/diploma-ecmascript-6.jpg',
-                        '/img/platzi/diploma-react.jpg',
-                        '/img/platzi/diploma-react-avanzado.jpg',
-                        '/img/platzi/diploma-react-router.jpg',
-                        '/img/platzi/diploma-redux.jpg',
-                        '/img/platzi/diploma-webpack.jpg'
-                    ]}
-                    width = {(width > 750) ? '650px' : '250px' }
-                    height = {(width > 750) ? '500px' : '200px' }
-                />
+                <Title color='#4d4d4d'>{txt.section[2].title}</Title>
+
+                <div className="content">
+                    <ul>{txt.section[2].content.map((li, key) => <li key={key}>{li}</li>)}</ul>
+                </div>
             </div>
-        </div>
+
+            <HorizontalRule />
+
+            <div className="section">
+                <Title color='#4d4d4d'>{txt.section[3].title}</Title>
+                <SubTitle color='#666666'>{txt.section[3].subtitle}</SubTitle>
+
+                <div className="content">
+                    <Paragraph color='#666666'>{txt.section[3].content}</Paragraph>
+                </div>
+            </div>
+        </Layout>
     );
 }
 

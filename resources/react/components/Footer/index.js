@@ -1,28 +1,26 @@
 import React from 'react';
+import './styles.css';
 
-import { FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdMail } from "react-icons/md";
+import { useLanguage } from '../../hooks/useLanguage';
 
-import './Footer.css';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
-const Footer = () => {
+const Footer = ({ src = '' }) => {
+    /** lang hook */
+    const [texts, setLang] = useLanguage();
+    const { Footer: txt } = texts;
 
     return (
-        <div className="Footer">
-            <div className="elem">
-                <MdMail />fcojnavarrowork@gmail.com
+        <div className="Footer" style={{ backgroundImage: `url(${src})` }}>
+            <div className="icons">
+                <a href="https://github.com/franpax95" target="_blank"><FaGithub /></a>
+                <a href="https://www.linkedin.com/in/francisco-javier-navarro-garcía-997ba0191" target="_blank"><FaLinkedin /></a>
+                <a href="https://www.instagram.com/franpax95/" target="_blank"><FaInstagram /></a>
             </div>
-            <a className="elem" target="_blank" href="https://github.com/franpax95">
-                <FaGithub />
-                github.com/franpax95
-            </a>
-            <div className="elem">
-                <FaWhatsapp />+34 697 883 410
+            <div className="info">
+                <p>{txt.email}</p>
+                <p>{txt.phone}</p>
             </div>
-            <a className="elem" target="_blank" href="https://www.linkedin.com/in/francisco-javier-navarro-garcía-997ba0191">
-                <FaLinkedin />
-                Linkedin
-            </a>
         </div>
     );
 }

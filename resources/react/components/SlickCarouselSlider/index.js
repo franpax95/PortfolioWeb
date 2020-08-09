@@ -15,7 +15,7 @@ const Slice = ({ url = '', width = '500px', height = '200px' }) => (
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
             border: 'solid 1px whitesmoke',
-            borderRadius: '20px'
+            borderRadius: '5px'
             // display: 'flex',
             // alignItems: 'center',
             // justifyContent: 'center'
@@ -25,20 +25,26 @@ const Slice = ({ url = '', width = '500px', height = '200px' }) => (
 
 const SlickCarouselSlider = ({
     images = [],
-    width = '500px',
-    height = '300px',
+    width = '600px',
+    height = '464px',
 }) => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500
-    };
+        // fade: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
 
+        focusOnSelect: true
+    };
+    const _width = `${parseInt(width)*1.2}px`;
 
     return (
         <div 
             className="SlickCarouselSlider"
-            style={{ width, height }}
+            style={{ width: _width, height }}
         >
             <Slider {...settings}>
                 {images.map((url, key) => (

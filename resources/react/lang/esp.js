@@ -1,181 +1,316 @@
 import React from 'react';
+import { FaHtml5, FaCss3, FaPhp, FaReact, FaLaravel, FaNodeJs, FaJava } from 'react-icons/fa';
+import { IoLogoJavascript } from 'react-icons/io';
+import { DiCodeigniter, DiStreamline } from "react-icons/di";
 
 
 
 export const Navbar = {
     home: 'Inicio',
     about: 'Sobre mí',
-    projects: 'Mis trabajos'
+    projects: 'Mis trabajos',
+    contact: 'Contacto',
+    spanish: 'Español',
+    english: 'Inglés'
 };
 
-
+export const Footer = {
+    email: <><b>Email:</b> <i>fcojnavarrowork@gmail.com</i></>,
+    phone: <><b>Teléfono:</b> <i>+34 697 883 410</i></>
+};
 
 export const Home = {
-    title: '¿Buscas un desarrollador web?',
-    subtitle: 'Soy un desarrollador web y programador de Fuengirola, Málaga. \n Creo aplicaciones web, normalmente con React.',
-    emailbtn: 'Envíame un email',
-    article: <>
-        ¡Bienvenido al portfolio de <i>Francisco Javier Navarro García</i>! <br />
-        Si necesitas de una página web, no dudes en contactar conmigo para cualquier pregunta o consulta.
-        Sin compromiso, soy un humilde programador. 
-        <br /><br />
-        Creo páginas <b>bonitas</b> y <b>funcionales</b> para pequeños negocios. Puedes echar un vistazo en la pestaña de <b>Mis trabajos</b>.<br />
-        ¿Tienes clara tu idea de negocio? ¡Juntos podremos plasmarla sobre la web!
-        <br /><br />
-        <span style={{fontSize: '1.1em'}}><b>Email</b>: fcojnavarrowork@gmail.com </span>
-        <br />
-        <b>Teléfono</b>: 697 883 410
-    </>
-};
-
-
-
-export const About = {
-    title: '¡Hola! Soy Francisco',
-    subtitle: <>Desarrollador web FullStack,<br />apasionado de los diseños responsivos</>,
-    lasttitle: 'Bienvenido a mi portfolio personal. Espero que su diseño y contenido sean de tu agrado y, sobretodo, que encuentres lo que has venido a buscar :)',
-    articles: [
-        <>
-            A pesar de ser un desarrollador web, he cursado varios años de la carrera de Ingeniería Telemática en la UMA. Allí descubrí este sector y enseguida me
-            enamoré y apasioné por él. Mi objetivo es ser un programador <i>FullStack</i> completo y capaz.
-        </>,
-        <>
-            En el caso del <b>Front-End</b>, mi tecnología/librería favorita es <b>React.js</b>. Además, es en la que más he desarrollado y más lejos he llegado en los últimos años.
-            Realmente me gusta programar con React. <br /> Para los más entendidos, me encanta programar <i>componentes funcionales</i>. Tanto proyecto, como código quedan bien estructurados y limpios.
-            <br /><b>Redux</b>, <i>Context</i>, <i>Hooks</i>, <i>React-Router</i>, <i>React-Springs</i>... son algunas de las herramientas que utilizo a la hora de programar.
-        </>,
-        <>
-            Para el <b>Back-End</b>, suelo utilizar <b>Laravel</b> como <i>framework</i>, pero también he programado con <b>CodeIgniter</b>. <br />Manejo de <b>bases de datos</b>, <b>gestión
-             de usuarios</b> o <b>uso de APIs públicas y personalizadas</b> son algunas de las cosas que puedo hacer.
-        </>
-    ],
-    techs: {
-        title: 'Resumen de las tecnologías más importantes que uso',
-        list: [
-            <>más de 4 años de experiencia en <b>HTML</b>, <b>CSS</b>, <b>JavaScript (<i>ECMA6</i>)</b> y <b>PHP</b>.</>,
-            <>más de 2 años de experiencia con <b>React.js</b></>,
-            <>más de 2 años de experiencia en el uso de <b>CodeIgniter</b></>,
-            <>alrededor de 1 año de experiencia usando <b>Laravel</b></>,
-            <>uso de bases de datos relacionales: <b>MySQL</b>, <b>SQLite</b>, <b>PostgreSQL</b>...</>,
-            <>uso de <b>Node.js</b> y <b>Webpack</b>.</>
-        ]
+    header: {
+        title: <>¡Bienvenido al portfolio de <br /> Francisco Javier Navarro García!</>,
+        subtitle: 'Desarrollador web Full-Stack y enamorado del diseño'
     },
-    otherTechs: {
-        title: 'Otras tecnologías que he utilizado',
-        list: [
-            <>uso de <b>JQuery</b> y <b>GraphQL</b></>,
-            <>más de 4 años programando <b>JAVA</b> en la carrera, sobretodo enfocado en Telecomunicaciones (<i>sockets, servlets...</i>)</>,
-            <>más de 5 años programando <b>C</b> en la carrera.</>,
-            <>experiencia con <b>C++</b></>,
-            <>experiencia programando <b>IoT</b>, concretamente <i>Arduino con JavaScript</i>.</>,
-            <>experiencia con <b>AndroidStudio</b> en <i>JAVA</i>.</>
-        ]
-    }
-};
-
-
-
-export const Projects = {
-    title: 'Mis proyectos',
-    projects:[
+    section: [
         {
-            id: 0,
-            name: <>Entrenamiento<br />(en mantenimiento)</>,
-            description: <>
-                Página desarrollada con React y Laravel. Usa Redux para la gestión vertical de las props.
-                <br /><br />
-                Puedes crearte un usuario y empezar a personalizar tus ejercicios completamente gratis. Accede desde el móvil en cualquier parte.
+            title: '¿Quieres conocer más sobre mí?',
+            subtitle: 'Clicka si quieres conocer más sobre las tecnologías que utilizo.',
+            paragraph: <>
+                Soy un desarrollador web nativo de Fuengirola, Málaga. Estudié la carrera de <b>Ingeniería Telemática</b> (<i>Telecomunicaciones</i>) en la <b>Universidad de Málaga (<i>UMA</i>)</b>.
+                <br />
+                Actualmente me dedico a desarrollar páginas web, sobretodo de la parte del <i>Front-End</i>.
             </>,
-            external_link: 'https://entrenamiento-app.herokuapp.com/',
-            github_link: 'https://github.com/franpax95/Entrenamiento',
-            images: [
-                '/img/entrenamiento/img0.jpg',
-                '/img/entrenamiento/img1.jpg',
-                '/img/entrenamiento/img2.jpg',
-                '/img/entrenamiento/img3.jpg',
-                '/img/entrenamiento/img4.jpg',
-                '/img/entrenamiento/img5.jpg',
-                '/img/entrenamiento/img6.jpg'
-            ]
+            link: 'Sobre mí'
         },
         {
-            id: 1,
-            name: 'Joe Williams portfolio',
-            description: <>
-                Página desarrollada con React y Laravel. Usa Redux.
-                <br /><br />
-                Portfolio personal de Joe Williams, diseñador gráfico. <br />
-                Hecha en colaboración con <b>@DMM161</b>.
-            </>,
-            external_link: 'https://joewilliams.herokuapp.com/',
-            github_link: 'https://github.com/franpax95/JoeWilliamsWeb',
-            images: [
-                '/img/joewilliams/img0.jpg',
-                '/img/joewilliams/img1.jpg',
-                '/img/joewilliams/img2.jpg',
-                '/img/joewilliams/img3.jpg',
-                '/img/joewilliams/img4.jpg',
-                '/img/joewilliams/img5.jpg',
-                '/img/joewilliams/img6.jpg',
-                '/img/joewilliams/img7.jpg'
-            ]
+            title: 'Accede a la galería',
+            subtitle: 'para ver mis proyectos y de lo que soy capaz.',
+            paragraph: <>Lo que más me gusta de un proyecto es la parte visual, el diseño. Soy un programador muy atento a la <b>UI/UX</b>, es decir, la <i>experiencia de usuario y su interfaz</i>.</>,
+            link: 'Ir a la galería'
         },
         {
-            id: 2,
-            name: 'Autoescuela Las Lagunas',
-            description: <>
-                Página desarrollada con React, <i>react-springs</i> para transición entre rutas.
-                <br /><br />
-                Página de Autoescuela Las Lagunas (<i>ahora Autoescuela Servial</i>). Disponible en Español e Inglés.
-            </>,
-            external_link: 'https://aelaslagunas.franpax95.vercel.app/',
-            github_link: 'https://github.com/franpax95/aelaslagunas',
-            images: [
-                '/img/aelaslagunas/img0.jpg',
-                '/img/aelaslagunas/img1.jpg',
-                '/img/aelaslagunas/img2.jpg',
-                '/img/aelaslagunas/img3.jpg',
-                '/img/aelaslagunas/img4.jpg',
-                '/img/aelaslagunas/img5.jpg'
-            ]
-        },
-        {
-            id: 3,
-            name: 'Petgram',
-            description: <>
-                Aplicación desarrollada con React. Utiliza <i>GraphQL</i> para peticiones a una api hecha con <i>Express</i>.
-                <br /><br />
-                Tutorial Platzi <i>React Avanzado</i>. Sube y comparte fotos de mascotas.
-            </>,
-            external_link: 'https://curso-platzi-react-avanzado.franpax95.now.sh/',
-            github_link: 'https://github.com/franpax95/Curso-Platzi-React-Avanzado',
-            images: [
-                '/img/petgram/img0.jpg',
-                '/img/petgram/img1.jpg',
-                '/img/petgram/img2.jpg',
-                '/img/petgram/img3.jpg',
-                '/img/petgram/img4.jpg'
-            ]
+            title: '¿Buscas ponerte en contacto conmigo?',
+            subtitle: <>Rellena el formulario en <b>contacto</b>.</>,
+            paragraph: <>Cualquier duda que pudieras tener, sin compromiso, mándame un email y podemos charlar para ver las posibilidades reales de tu proyecto.</>,
+            link: 'Contacta conmigo'
         }
     ]
 };
 
-
-export const Email = {
-    title: 'Contacta conmigo',
-    name: 'Nombre y Apellidos',
-    email: 'Correo Electrónico',
-    subject: 'Asunto',
-    body: 'Mensaje',
-    submit: 'Enviar Correo',
-    success: 'El Email se envió correctamente.',
-    error: 'Ocurrió algo inesperado, vuelve a intentarlo más tarde.'
+export const About = {
+    title: 'Sobre mí',
+    subtitle: 'Desarrollador web React y Laravel.',
+    section: [
+        {
+            title: 'Principales tecnologías',
+            subtitle: 'que utilizo.',
+            content: [
+                { title: 'HTML5', description: 'Más de 4 años programando con HTML5.', icon: <FaHtml5 /> },
+                { title: 'CSS3', description: 'Más de 4 años programando con CSS.', icon: <FaCss3 /> },
+                { title: 'JavaScript', description: 'Más de 4 años programando con JavaScript. También ECMA6 ~ 10', icon: <IoLogoJavascript /> },
+                { title: 'PHP', description: 'Más de 4 años programando con PHP.', icon: <FaPhp /> },
+                { title: 'React', description: 'Más de 2 años programando con ReactJS (librería).', icon: <FaReact /> },
+                { title: 'Laravel', description: '1 año programando con Laravel (framework).', icon: <FaLaravel /> },
+                { title: 'CodeIgniter', description: 'Más de 2 años programando con CodeIgniter (framework).', icon: <DiCodeigniter /> },
+                { title: 'NodeJs', description: 'Uso de NodeJs.', icon: <FaNodeJs /> },
+                { title: 'MySQL', description: 'Más de 3 años de experiencia con bases de datos relacionales (PostreQL, MySQL...)', icon: <DiStreamline /> },
+                { title: 'Java', description: 'Más de 5 años programando con Java.', icon: <FaJava /> },
+                { title: 'Lenguaje C', description: 'Más de 5 años programando con C.', icon: 'C' },
+                { title: 'Lenguaje C++', description: 'Más de 1 año programando en C++.', icon: 'C++' }
+            ]
+        },
+        {
+            title: 'Diplomas de Platzi.com',
+            subtitle: ''
+        },
+        {
+            title: 'Otras tecnologías que he utilizado',
+            content: [
+                'experiencia usando Webpack, en concreto inicializando proyectos de React.',
+                'uso de JQuery y algo de GraphQL.',
+                'experiencia programando IoT, concretamente Arduino con JavaScript.',
+                'experiencia con AndroidStudio en JAVA.'
+            ]
+        },
+        {
+            title: 'Acerca de mí',
+            subtitle: 'Desarrollador web Full-Stack',
+            content: <>
+                Sin duda, mi parte favorita es el <b>Front-End</b>. Puedo pasarme horas sólo para conseguir un pequeño detalle en un efecto o transición. Por ello, me siento muy cómodo con <b>React.js</b>. Es una librería que permite tener un control excelente de lo que utilizas o renderizas. <br /> Me considero muy detallista para lo que tenga que ver con la <b>UI/UX</b>.
+                <br /><br />
+                Algunas de las características o paquetes que he utilizado de React son <i>React Hooks</i>, <i>Redux</i>, <i>React Context</i>, <i>React/Reach Router</i>, <i>React Springs</i>, entre otras muchas.
+                <br /><br /><br /><br />
+                El <b>Back-End</b> fue donde empecé, en la carrera, con el framework <i>CodeIgniter</i>. Después de un par de años programando, me enteré de <b>Laravel</b> y desde entonces no he necesitado nada más.
+                <br /><br />
+                Manejo de <i>bases de datos</i>, <i>uso de APIs públicas y/o personalizadas</i> y <i>gestión de usuarios</i> son algunas de las cosas que puedo hacer.
+            </>
+        }
+    ]
 };
 
+export const Contact = {
+    title: 'Contacto',
+    subtitle: 'Si necesitas de un diseño, una página para tu negocio, un trabajo de universidad... Ponlo en el cuerpo del mensaje y estudiamos juntos tu caso para ver las posibilidades reales de tu proyecto.',
+    input: {
+        name: 'Nombre',
+        email: 'Email',
+        message: 'Mensaje'
+    },
+    validate: {
+        name: 'Introduce un nombre antes de enviar, por favor.',
+        email: 'Introduce un email antes de enviar, por favor.',
+        message: 'Seguro que quieres hablarme de algo... ¿No se te olvida quizás el mensaje en sí?'
+    },
+    error: 'Ha ocurrido un error inesperado. Inténtalo de nuevo más tarde.',
+    success: 'Mensaje enviado con éxito. Te contactaré próximamente :)'
+};
 
+export const Projects = {
+    title: 'Mis proyectos recientes',
+    subtitle: <>
+        Aquí colgaré los proyectos que vaya realizando.
+        <br />¡Podrás ver una vista previa desde aquí mismo o visitar directamente la página!
+        <br /><i>Para programadores, también un enlace a GitHub.</i>
+    </>,
+    projects: [
+        {
+            id: 0,
+            title: 'Joe Williams portfolio',
+            description: <>
+                Página desarrollada con React y Laravel. Usa Redux.
+                <br />
+                Portfolio personal de Joe Williams, diseñador gráfico. <br />
+                Hecha en colaboración con <b>@DMM161</b>.
+            </>,
+            elink: 'https://velvetdistortion.com',
+            glink: 'https://github.com/franpax95/JoeWilliamsWeb',
+            cover: '/img/projects/joewilliams/img0.jpg',
+            srcs: [
+                '/img/projects/joewilliams/img0.jpg',
+                '/img/projects/joewilliams/img1.jpg',
+                '/img/projects/joewilliams/img2.jpg',
+                '/img/projects/joewilliams/img3.jpg',
+                '/img/projects/joewilliams/img4.jpg',
+                '/img/projects/joewilliams/img5.jpg',
+                '/img/projects/joewilliams/img6.jpg',
+                '/img/projects/joewilliams/img7.jpg',
+                '/img/projects/joewilliams/img8.jpg'
+            ]
+        },
+        {
+            id: 1,
+            title: 'Mountain Design Portfolio',
+            description: <>
+                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
+                <br />
+                Diseño de un portfolio y/o negocios.
+            </>,
+            elink: 'https://mountain-design.vercel.app/',
+            glink: 'https://github.com/franpax95/Mountain-Design',
+            cover: '/img/projects/mountainportfolio/img0.jpg',
+            srcs: [
+                '/img/projects/mountainportfolio/img0.jpg',
+                '/img/projects/mountainportfolio/img1.jpg',
+                '/img/projects/mountainportfolio/img2.jpg',
+                '/img/projects/mountainportfolio/img3.jpg',
+                '/img/projects/mountainportfolio/img4.jpg',
+                '/img/projects/mountainportfolio/img5.jpg'
+            ]
+        },
+        {
+            id: 2,
+            title: 'Autoescuela Las Lagunas',
+            description: <>
+                Página desarrollada con React, <i>react-springs</i> para transición entre rutas.
+                <br />
+                Página de Autoescuela Las Lagunas (<i>ahora Autoescuela Servial</i>). Disponible en Español e Inglés.
+            </>,
+            elink: 'https://aelaslagunas.franpax95.vercel.app/',
+            glink: 'https://github.com/franpax95/aelaslagunas',
+            cover: '/img/projects/aelaslagunas/img0.jpg',
+            srcs: [
+                '/img/projects/aelaslagunas/img0.jpg',
+                '/img/projects/aelaslagunas/img1.jpg',
+                '/img/projects/aelaslagunas/img2.jpg',
+                '/img/projects/aelaslagunas/img3.jpg',
+                '/img/projects/aelaslagunas/img4.jpg',
+                '/img/projects/aelaslagunas/img5.jpg'
+            ]
+        },
+        {
+            id: 3,
+            title: 'Petgram',
+            description: <>
+                Aplicación desarrollada con React. Utiliza <i>GraphQL</i> para peticiones a una api hecha con <i>Express</i>.
+                <br />
+                Tutorial Platzi <i>React Avanzado</i>. Sube y comparte fotos de mascotas.
+            </>,
+            elink: 'https://curso-platzi-react-avanzado.franpax95.now.sh/',
+            glink: 'https://github.com/franpax95/Curso-Platzi-React-Avanzado',
+            cover: '/img/projects/petgram/img0.jpg',
+            srcs: [
+                '/img/projects/petgram/img0.jpg',
+                '/img/projects/petgram/img1.jpg',
+                '/img/projects/petgram/img2.jpg',
+                '/img/projects/petgram/img3.jpg',
+                '/img/projects/petgram/img4.jpg'
+            ]
+        },
+        {
+            id: 4,
+            title: 'Restaurante Veggie',
+            description: <>
+                Diseño realizado con React, también en versión móvil.
+                <br />
+                Temática veggie. Usa react-spring para las transiciones.
+            </>,
+            elink: 'https://restaurante-comida-vegana.vercel.app',
+            glink: 'https://github.com/franpax95/restaurante-comida-vegana',
+            cover: '/img/projects/restauranteveggie/img0.jpg',
+            srcs: [
+                '/img/projects/restauranteveggie/img0.jpg',
+                '/img/projects/restauranteveggie/img1.jpg',
+                '/img/projects/restauranteveggie/img2.jpg',
+                '/img/projects/restauranteveggie/img3.jpg',
+                '/img/projects/restauranteveggie/img4.jpg',
+                '/img/projects/restauranteveggie/img5.jpg',
+                '/img/projects/restauranteveggie/img6.jpg',
+                '/img/projects/restauranteveggie/img7.jpg'
+            ]
+        },
+        {
+            id: 5,
+            title: 'Gallery Portfolio',
+            description: <>
+                Diseño hecho con React. React-spring para la <i>experiencia de usuario</i>.
+                <br />
+                Para portfolios de fotógrafos, diseñadores gráficos...
+            </>,
+            elink: 'https://gallery-rho.vercel.app/',
+            glink: 'https://github.com/franpax95/gallery',
+            cover: '/img/projects/gallery/img0.jpg',
+            srcs: [
+                '/img/projects/gallery/img0.jpg',
+                '/img/projects/gallery/img1.jpg',
+                '/img/projects/gallery/img2.jpg',
+                '/img/projects/gallery/img3.jpg',
+                '/img/projects/gallery/img4.jpg'
+            ]
+        },
+        {
+            id: 6,
+            title: 'Budismo Info App',
+            description: <>
+                Diseño realizado con React. 
+                <br />
+                Información relacionada con el budismo.
+            </>,
+            elink: 'https://budismo-app.vercel.app/',
+            glink: 'https://github.com/franpax95/budismo-app',
+            cover: '/img/projects/budismo/img0.jpg',
+            srcs: [
+                '/img/projects/budismo/img0.jpg',
+                '/img/projects/budismo/img1.jpg',
+                '/img/projects/budismo/img2.jpg'
+            ]
+        },
+        {
+            id: 7,
+            title: 'Love App',
+            description: <>
+                Aplicación desarrollada con React. Muestra la compatibilidad con otra persona mediante los nombres.
+                <br />
+                Utiliza una API pública de RapidAPI.
+            </>,
+            elink: 'https://love-match-app.vercel.app/',
+            glink: 'https://github.com/franpax95/love-match-app',
+            cover: '/img/projects/loveapp/img0.jpg',
+            srcs: [
+                '/img/projects/loveapp/img0.jpg',
+                '/img/projects/loveapp/img1.jpg',
+                '/img/projects/loveapp/img2.jpg'
+            ]
+        },
+        {
+            id: 8,
+            title: 'Entrenamiento App',
+            description: <>
+                Página desarrollada con React y Laravel. Usa Redux para la gestión vertical de las props.
+                <br />
+                Puedes crearte un usuario y empezar a personalizar tus ejercicios completamente gratis. Accede desde el móvil en cualquier parte.
+            </>,
+            elink: 'https://entrenamiento-app.herokuapp.com/',
+            glink: 'https://github.com/franpax95/Entrenamiento',
+            cover: '/img/projects/entrenamiento/img0.jpg',
+            srcs: [
+                '/img/projects/entrenamiento/img0.jpg',
+                '/img/projects/entrenamiento/img1.jpg',
+                '/img/projects/entrenamiento/img2.jpg',
+                '/img/projects/entrenamiento/img3.jpg',
+                '/img/projects/entrenamiento/img4.jpg',
+                '/img/projects/entrenamiento/img5.jpg',
+                '/img/projects/entrenamiento/img6.jpg'
+            ]
+        },
+        
+    ]
+};
 
 const espTexts = {
-    Navbar, Home, About, Projects, Email
+    Navbar, Footer, Home, About, Contact, Projects
 }
 
 export default espTexts;

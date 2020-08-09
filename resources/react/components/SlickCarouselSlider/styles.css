@@ -14,11 +14,5 @@
 .SlickCarouselSlider .slick-arrow:hover{
     background-color: #666666;
 }
-
-.SlickCarouselSlider .slick-prev{
-    left: -50px;
-}
-
-.SlickCarouselSlider .slick-next{
-    right: -50px;
-}
+.SlickCarouselSlider .slick-prev{ left: -50px; }
+.SlickCarouselSlider .slick-next{ right: -50px; }

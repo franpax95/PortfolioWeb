@@ -1,83 +1,42 @@
-.Projects .backView{
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-}
-.Projects .backView .links{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100px;
-
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.Projects .backView .description{
-    position: absolute;
-    top: 100px;
-    left: 0;
-
-    width: 100%;
-    height: 200px;
-
-    user-select: none;
-}
-
-
 .Projects{
-    min-height: 100vh;
-}
-
-.Projects h1{
     width: 100%;
-    text-align: center;
+    padding-top: 20vh;
 }
 
 .Projects .list{
+    padding: 15vh 10vw;
+
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    
     align-items: center;
-    position: relative;
 }
 .Projects .list > *{
-    margin: 30px;
+    margin: 4vh 4vw;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .Projects{
-        padding: 20vh 10px;
-    }
-    .Projects h1{
-        font-size: 8vw;
-    }
+    .Projects .Title,
+    .Projects .SubTitle { width: 90%; }
+    
+    .LargeImage{ display: none; }
+
+    .Projects .list{ justify-content: flex-start; }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .Projects{
-        padding: 10vh 6vw;
-    }
-    .Projects h1{
-        font-size: 5vw;
-    }
+    .Projects .Title,
+    .Projects .SubTitle { width: 80%; }
+    .Projects .list{ justify-content: center; }
 }
 
-/* Large devices (laptops/desktops, 1000px and up) */
-@media only screen and (min-width: 1000px) {
-    .Projects {
-        padding: 10vh 12vw;
-    }
-    .Projects h1{
-        font-size: 3vw;
-    }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .Projects .Title,
+    .Projects .SubTitle { width: 70%; }
+    .Projects .list{ justify-content: flex-start; }
 }

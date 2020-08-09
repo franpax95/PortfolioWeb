@@ -1,32 +1,117 @@
-import React, { useState } from 'react';
-import { useLanguage } from '../../hooks/useLanguage';
-import { nl2br } from '../../util';
-
-import EmailModal from '../../components/EmailModal';
-
+import React from 'react';
 import './Home.css';
 
+import { useLanguage } from '../../hooks/useLanguage';
+
+import Footer from '../../components/Footer';
+import Section, { BackgroundFixedSection } from '../../components/Section';
+import { CircleImage } from '../../components/Image';
+
+import Title, { SubTitle } from '../../components/Title';
+import Paragraph from '../../components/Paragraph';
+import Button from '../../components/Button';
+
+
 const Home = () => {
+    /** lang hook */
     const [texts, setLang] = useLanguage();
-    const [isModalOn, setIsModalOn] = useState(false);
+    const { Home: txt } = texts;
 
-    return (<>
-        {isModalOn && <EmailModal  onClickOutside={() => setIsModalOn(false)} />}
+    return (
         <div className="Home">
-            <h1>{texts.Home.title}</h1>
-            <h3>{nl2br(texts.Home.subtitle)}</h3>
-            <button className="emailbtn" onClick={() => setIsModalOn(true)}>{texts.Home.emailbtn}</button>
+            <BackgroundFixedSection src='/img/home/header.jpg'>
+                <Title color='white'>{txt.header.title}</Title>
 
-            <div className="section">
-                <div className="wrapper">
-                    <img src="/img/about2.jpg" alt="Francisco Javier Navarro García" />
+                <hr style={{ 
+                    width: '15%',
+                    margin: '5vh 0',
+                    border: 'none', 
+                    borderTop: 'solid 1.5px whitesmoke' 
+                }} />
+               
+                <SubTitle color='whitesmoke'>{txt.header.subtitle}</SubTitle>
+            </BackgroundFixedSection>
+
+            <Section>
+                <div className="section-header">
+                    <CircleImage src='/img/home/section1.jpg' alt='' />
                 </div>
-                <div className="article">
-                    {texts.Home.article}
+                <div className="section-content">
+                    <Title color='#404040' textAlign='left'>{txt.section[0].title}</Title>
+                    <SubTitle color='#4d4d4d' textAlign='left'>{txt.section[0].subtitle}</SubTitle>
+
+                    <hr style={{ 
+                        width: '10%',
+                        margin: '30px 0',
+                        border: 'none', 
+                        borderTop: 'solid 1.5px gray' 
+                    }} />
+
+                    <Paragraph color='#666666'>{txt.section[0].paragraph}</Paragraph>
+                    <br /><br />
+                    <Button to='/about'>{txt.section[0].link}</Button>
                 </div>
-            </div>
+            </Section>
+
+            <hr style={{ 
+                width: '70%',
+                margin: '30px 0',
+                border: 'none', 
+                borderTop: 'solid 1px lightgray' 
+            }} />
+
+            <Section reverse={true}>
+                <div className="section-header">
+                    <CircleImage src='/img/home/section2.jpg' alt='' />
+                </div>
+                <div className="section-content">
+                    <Title color='#404040' textAlign='left'>{txt.section[1].title}</Title>
+                    <SubTitle color='#4d4d4d' textAlign='left'>{txt.section[1].subtitle}</SubTitle>
+
+                    <hr style={{ 
+                        width: '10%',
+                        margin: '30px 0',
+                        border: 'none', 
+                        borderTop: 'solid 1.5px gray' 
+                    }} />
+
+                    <Paragraph color='#666666'>{txt.section[1].paragraph}</Paragraph>
+                    <br /><br />
+                    <Button to='/projects'>{txt.section[1].link}</Button>
+                </div>
+            </Section>
+
+            <hr style={{ 
+                width: '70%',
+                margin: '30px 0',
+                border: 'none', 
+                borderTop: 'solid 1px lightgray' 
+            }} />
+
+            <Section>
+                <div className="section-header">
+                    <CircleImage src='/img/home/section3.jpg' alt='' />
+                </div>
+                <div className="section-content">
+                    <Title color='#404040' textAlign='left'>{txt.section[2].title}</Title>
+                    <SubTitle color='#4d4d4d' textAlign='left'>{txt.section[2].subtitle}</SubTitle>
+
+                    <hr style={{ 
+                        width: '10%',
+                        margin: '30px 0',
+                        border: 'none', 
+                        borderTop: 'solid 1.5px gray' 
+                    }} />
+
+                    <Paragraph color='#666666'>{txt.section[2].paragraph}</Paragraph>
+                    <br /><br />
+                    <Button to='/contact'>{txt.section[2].link}</Button>
+                </div>
+            </Section>
+
+            <Footer src='/img/home/footer.jpg' />
         </div>
-    </>);
+    );
 }
 
 export default Home;

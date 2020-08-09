@@ -1,124 +1,30 @@
 .Home{
-    min-height: 100vh;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.Home h1{ text-align: center; }
-.Home h3{ text-align: right; }
-
-.Home .emailbtn{
-    margin: 20px 0;
-
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background-color: lightgreen;
-    color: #262626;
-
-
-    text-transform: capitalize;
-    font-weight: bold;
-
-    transition: background-color .5s, color .5s;
-}
-.Home .emailbtn:hover{
-    background-color: green;
-    color: white;
-}
-
-.Home .section{
-    padding: 0;
-    margin-top: 10vh;
+.Home .section-header{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.Home .wrapper img{
-    width: 100%;
-    object-fit: contain;
+.Home .section-content{
+    padding: 5vh 10px;
+    display: flex;
+    flex-direction: column;
 }
+.Home .section-content .Button{ margin-right: auto; }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .Home{
-        padding: 20vh 10px;
-    }
-    .Home h1{
-        font-size: 8vw;
-    }
-    .Home h3{
-        font-size: 4vw;
-    }
-    .Home h3 br{ margin: 10px 0; }
-
-    .Home .emailbtn{
-        width: 60vw;
-        padding: 10px 0;
-        font-size: 5vw;
-    }
-
-    .Home .section{
-        flex-direction: column;
-    }
-    .Home .wrapper {
-        width: 100%;
-    }
-    .Home .wrapper img{
-        max-width: 95vw;
-        max-height: 50vh;
-    }
-    .Home .article{
-        padding: 10px;
-        width: 100%;
-    }
+    .Home .section-header{ width: 100%; }
+    .Home .section-content{ width: 100%; }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .Home{
-        padding: 10vh 6vw;
-    }
-    .Home h1{
-        font-size: 5vw;
-    }
-    .Home h3{
-        font-size: 3vw;
-    }
-    .Home .section{
-        flex-direction: row;
-    }
-
-    .Home .emailbtn{
-        width: 60vw;
-        padding: 10px 0;
-        font-size: 3vw;
-    }
-
-    .Home .wrapper{
-        width: 40%;
-    }
-
-    .Home .article{
-        width: 60%;
-        padding: 0 5vw;
-    }
-}
-
-/* Large devices (laptops/desktops, 1000px and up) */
-@media only screen and (min-width: 1000px) {
-    .Home {
-        padding: 10vh 12vw;
-    }
-    .Home h1{
-        font-size: 3vw;
-    }
-    .Home h3{
-        font-size: 2vw;
-        text-align: right;
-    }
+    .Home .section-header{ width: 40%; }
+    .Home .section-content{ width: 60%; }
 }

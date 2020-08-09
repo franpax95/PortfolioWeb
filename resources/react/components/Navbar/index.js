@@ -1,92 +1,79 @@
-import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React, { useState, useRef } from 'react';
+import './styles.css';
 
-import { useWindowHeight } from '../../hooks/useWindowHeight';
-import { useInnerWidth } from '../../hooks/useInnerWidth';
+import { useSpring, animated } from 'react-spring';
+import onClickOutside from "react-onclickoutside";
 import { useLanguage } from '../../hooks/useLanguage';
 
-import { MdLanguage, MdClose } from "react-icons/md";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import { GoThreeBars } from "react-icons/go";
-
-import './Navbar.css';
+import { NavLink } from 'react-router-dom';
+import { GoThreeBars } from 'react-icons/go';
+import { MdClose } from 'react-icons/md';
 
 const Navbar = () => {
-    const WIDTH_LIMIT = 700;
-    const HEIGHT_LIMIT = 380;
-
-    const height = useWindowHeight();
-    const width = useInnerWidth();
-    const { pathname } = useLocation();
+    /** lang hook */
     const [texts, setLang] = useLanguage();
-    const [dropdownActive, setDropdownActive] = useState(false);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    
 
-    const isHomeLinkActive = () => {
-        if((pathname === "/") || (pathname === "/home"))
-            return true;
-        else
-            return false;
+    /** ref for Navbar (necessary to handleClickoutside) */
+    const ref = useRef();
+
+    /** sidebar transition effect */
+    const [display, setDisplay] = useState(false);
+    const spring = useSpring({ right: display ? '0' : '-300px' });
+
+
+    Navbar.handleClickOutside = (e) => { 
+        if(!ref.current.contains(e.target)) setDisplay(false);
     }
 
-    const changeLang = (lang) => {
+    const onLangClick = (lang) => {
         setLang(lang);
-        setDropdownActive(false);
-        setIsSidebarOpen(false);
+        setDisplay(false);
     }
 
-    let class_name = (width > WIDTH_LIMIT) 
-        ? `Navbar ${(height > HEIGHT_LIMIT) ? 'black' : 'white'}` 
-        : `Sidebar ${(isSidebarOpen) ? 'open' : 'closed'}`;
-    
+
+    const { Navbar: txt } = texts;
     return (<>
-        {
-            (width < WIDTH_LIMIT) &&
-            <button 
-                className={`SidebarButton${(isSidebarOpen) ? ' red' : ''}`} 
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            >
-                {(isSidebarOpen) ? <MdClose /> : <GoThreeBars />}
-            </button>
-        }
-        <div className={class_name}>
-            <NavLink 
-                to="/home" 
-                activeClassName="active" 
-                isActive={() => isHomeLinkActive()}
-                onClick={() => setIsSidebarOpen(false)}
-            >
-                {texts.Navbar.home}
-            </NavLink>
+        <button className="navbar-open-btn" onClick={() => setDisplay(true)}>
+            <GoThreeBars />
+        </button>
 
-            <NavLink to="/about" activeClassName="active" onClick={() => setIsSidebarOpen(false)}>
-                {texts.Navbar.about}
-            </NavLink>
+        <animated.div className="Navbar" ref={ref} style={spring}>
+            <div className="container">
+                <button className="navbar-close-btn" onClick={() => setDisplay(false)}>
+                    <MdClose />
+                </button>
 
-            <NavLink to="/projects" activeClassName="active" onClick={() => setIsSidebarOpen(false)}>
-                {texts.Navbar.projects}
-            </NavLink>
+                <NavLink exact to="/" activeClassName="active" onClick={() => setDisplay(false)}>
+                    {txt.home}
+                </NavLink>
 
-            <div className="language-box">
-                {
-                    (width > WIDTH_LIMIT) && 
-                    <button onClick={() => setDropdownActive(!dropdownActive)}>
-                        <MdLanguage /> 
-                        {(dropdownActive) ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
+                <NavLink to="/about" activeClassName="active" onClick={() => setDisplay(false)}>
+                    {txt.about}
+                </NavLink>
+
+                <NavLink to="/projects" activeClassName="active" onClick={() => setDisplay(false)}>
+                    {txt.projects}
+                </NavLink>
+
+                <NavLink to="/contact" activeClassName="active" onClick={() => setDisplay(false)}>
+                    {txt.contact}
+                </NavLink>
+                
+                <div className="lang">
+                    <button onClick={() => onLangClick('esp')}>
+                        <img src='/img/spainflag.png' alt='' />
+                        {txt.spanish}
                     </button>
-                }
-                <button onClick={() => changeLang('esp')} className={(dropdownActive) ? 'visible' : 'none'}>
-                    <img src="/img/spainflag.png" alt="Español" />
-                    Español
-                </button>
-                <button onClick={() => changeLang('eng')} className={(dropdownActive) ? 'visible' : 'none'}>
-                    <img src="/img/englandflag.png" alt="Inglés" />
-                    English
-                </button>
+
+                    <button onClick={() => onLangClick('eng')}>
+                        <img src='/img/englandflag.png' alt='' />
+                        {txt.english}
+                    </button>
+                </div>
             </div>
-        </div>
+        </animated.div>
     </>);
 }
 
-export default Navbar;
+const clickOutsideConfig = { handleClickOutside: () => Navbar.handleClickOutside };
+export default onClickOutside(Navbar, clickOutsideConfig);

@@ -1,70 +1,48 @@
-import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
-import './Card.css';
+import React from 'react';
+import './styles.css';
 
-const Card = ({
-    width = '400px',
-    height = '400px',
-    front = <></>,
-    back = <></>
+import { FaGithub } from 'react-icons/fa';
+import { GoLinkExternal } from 'react-icons/go';
+
+export const IconCard = ({
+    width = '350px',
+    title = 'Title',
+    description = 'Description',
+    icon
+}) => <div className="IconCard" style={{ width }}>
+    <div className="icon">{icon}</div>
+    <div className="title">{title}</div>
+    <div className="description">{description}</div>
+</div>;
+
+export const ProjectCard = ({
+    id = 0,
+    cover = '',
+    title = 'Title',
+    description = 'Description',
+    elink = '',
+    glink = '',
+    onClick = undefined
 }) => {
-    const [ selected, setSelected] = useState(false);
 
-    
-
-    const { opacity, transform } = useSpring({
-        opacity: selected ? 1 : 0,
-        transform: `rotateY(${selected ? 180 : 0}deg)`,
-        config: {
-            friction: 12,
-            tension: 200
-        }
-    });
-
-    const [props, set] = useSpring(() => ({
-        state: [0, 0, 1]
-    }));
-
-    const inverseOpacity = o => 1 - o;
-    const inverseTransform = t => `${t} rotateY(180deg)`;
-
-    const transformCard = (x, y, scale) => `perspective(1000px) rotateX(${x}deg) rotateY(${y}deg) scale(${scale})`;
 
     return (
-        <animated.div 
-            className="Card" 
-            style={{ 
-                width, 
-                height,
-                transform: !selected && props.state.interpolate(transformCard)
-            }} 
-            onClick={() => setSelected(!selected)}
-        >
+        <div className="ProjectCard">
+            <div className="img">
+                <button className="layout">
+                    <div className="view" onClick={() => onClick(id)}>
+                        <span>View</span>
+                    </div>
+                    <div className="icons">
+                        <a href={glink} target="_blank" ><FaGithub />GitHub</a>
+                        <a href={elink} target="_blank"><GoLinkExternal />Visit webpage</a>
+                    </div>
+                </button>
+                <img src={cover} alt={title} />
+            </div>
 
-            <animated.div 
-                className="front"
-                style={{ 
-                    opacity: opacity.interpolate(inverseOpacity), 
-                    transform,
-                    zIndex: selected ? 1 : 10
-                }}
-            >
-                {front}
-            </animated.div>
-
-            <animated.div 
-                className="back" 
-                style={{ 
-                    opacity, 
-                    transform: transform.interpolate(inverseTransform),
-                    zIndex: selected ? 10 : 1
-                }}
-            >
-                {back}
-            </animated.div>
-
-        </animated.div>
-    )
+            <div className="title">{title}</div>
+            <div className="description">{description}</div>
+        </div>
+    );
 }
-
-export default Card;

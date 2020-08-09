@@ -1,63 +1,42 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import './App.css';
+
 import { Route, Switch, useLocation } from 'react-router-dom';
-import { useSpring, useTransition, animated } from 'react-spring';
+import { useTransition, animated, config } from 'react-spring';
 
 import Navbar from '../components/Navbar';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Projects from '../pages/Projects';
-
-import './App.css';
-
-
-
-const ScrollToTop = () => {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
-    return null;
-} 
-
-const ScrollToTheTop = () => {
-    const props = useSpring({ scroll: 0, from: { scroll: 0 } })
-    return <animated.div scrollTop={props.scroll} style={{ position: 'fixed', top: '0' }} />
-}
+import Contact from '../pages/Contact';
 
 
 const App = () => {
     const location = useLocation();
     const transitions = useTransition(location, location => location.pathname, {
-        from: { opacity: 0 },
+        from: { opacity: 0, position: 'absolute' },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
-        config: { duration: 300 }
+        config: config.molasses
     });
 
 
 
     return (<>
         <Navbar />
-        <Header />
-        <div className="App">
-            <ScrollToTop />
-
-            {transitions.map(({ item: location, props, key }) => (
-                <animated.div key={key} style={props}>
+        {transitions.map(({ item: location, props, key }) => (
+            <animated.div key={key} style={{ ...props, width: '100%', height: '100%' }}>
+                <div className="App">
                     <Switch location={location}>
-                        <Route exact path={["/", "/home"]} component={Home} />
-                        <Route exact path="/about" component={About} />
-                        <Route exact path="/projects" component={Projects} />
+                            <Route exact path="/" component={Home} />
+                            <Route exact path="/about" component={About} />
+                            <Route exact path="/projects" component={Projects} />
+                            <Route exact path="/contact" component={Contact} />
                     </Switch>
-                </animated.div>
-            ))}
-        </div>
-        <Footer />
+                </div>
+            </animated.div>
+        ))}
     </>);
 }
 
