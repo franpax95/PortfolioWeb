@@ -41,6 +41,11 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+/**
+ * Register SEO Tools
+ */
+$app->register(Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

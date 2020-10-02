@@ -29,10 +29,10 @@ const App = () => {
             <animated.div key={key} style={{ ...props, width: '100%', height: '100%' }}>
                 <div className="App">
                     <Switch location={location}>
-                            <Route exact path="/" component={Home} />
-                            <Route exact path="/about" component={About} />
-                            <Route exact path="/projects" component={Projects} />
-                            <Route exact path="/contact" component={Contact} />
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/projects" component={Projects} />
+                        <Route exact path="/contact" component={Contact} />
                     </Switch>
                 </div>
             </animated.div>

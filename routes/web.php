@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get( '/{path?}', function(){
+    // SEO::setTitle('Página SEO');
+    // SEO::setDescription('Ejemplo de descripción de la página');
+    // SEO::opengraph()->setUrl('http://nigmacode.com');
+    // SEO::setCanonical('https://nigmacode.com');
+    // SEO::opengraph()->addProperty('type', 'articles');
+    // SEO::twitter()->setSite('@franpax95');
+
     return view( 'app' );
 } )->where('path', '.*');

@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        /** DESCOMENTAR PARA EL HOSTING DE IONOS */
+        // $this->app->bind('path.public', function() {
+        //     return base_path().'/public_html';
+        // });
     }
 
     /**
@@ -23,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /** DESCOMENTAR PARA EL HOSTING DE IONOS */
+        // $this->app->bind('path.public', function() {
+        //     return base_path().'/../public_html';
+        // });
     }
 }
